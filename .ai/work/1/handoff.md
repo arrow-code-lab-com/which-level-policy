@@ -34,7 +34,7 @@ artifacts:
     - index.html
     - terms.html
     - legal.html
-events: 44
+events: 45
 ---
 
 # Issue #1 の索引
@@ -73,3 +73,4 @@ events: 44
 
 - env [review] 事実確認用の which-level の作業ツリー（workspaces/which-level/画面修正）がレビュー途中で消えた … `events/20261104T160214-review.yaml`
 - decision [impl] 無料の利用者の賠償の上限は「広告なし版」の販売価格の2分の1（ユーザー回答） … `events/20261104T161333-impl.yaml`
+- decision [impl] バックアップ・他機種へのデータ移行の機能は提供しない（ユーザー回答）。ポリシー第5章・規約第3条に明記し、データ消失の責任は第10条による旨を追記 … `events/20261104T162559-impl.yaml`
