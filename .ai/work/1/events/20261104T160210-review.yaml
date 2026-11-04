@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:308
+fix: FR-2 は参考元（単体の HTML＋インライン CSS/JS）に合わせる指定なので、現状維持でよい。共通化するなら同一オリジンの lang.js / style.css に出す。
+state: open
+summary: setLang のスクリプトと style が 3 ページに重複している
+body: "The same `setLang` script and the whole inline `<style>` block are copied into index.html, terms.html and legal.html. 故障シナリオ: Fixing the language-persistence problem above, or any style change, has to be done three times. One page drifting from the others is likely. A shared lang.js and CSS file on the same origin would still meet FR-2's no-CDN rule.（出典: /code-review）"

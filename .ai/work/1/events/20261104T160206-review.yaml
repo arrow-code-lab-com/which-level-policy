@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:309
+fix: "FR-2 は参考元に合わせる指定で、参考元も同じ挙動。直すなら、読み込み時に location.hash（#en）または ?lang=en を見て setLang を呼び、英語版のページ間リンクに #en を付ける（外部ファイル不要）。参考元と揃えるかの判断が要るので、直さないなら decision に残す。"
+state: open
+summary: 言語の選択がページ移動・URL で保持されず、英語版を直接開く URL も無い
+body: "The language choice is not kept when moving between pages or loading a URL. Every page opens in Japanese, with no ?lang= or #en parameter, no navigator.language check and no saved choice. The links between pages (index.html:159/296, terms.html:105/182, legal.html:53/77) do not carry the language. 故障シナリオ: An English-speaking App Store reviewer opens the registered URL and gets Japanese. They switch to English, click 'Terms of Service' and get Japanese again. There is also no URL that opens the English version directly for the English store listing.（出典: /code-review）"

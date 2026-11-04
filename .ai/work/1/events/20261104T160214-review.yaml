@@ -1,0 +1,4 @@
+node: review
+kind: env
+summary: 事実確認用の which-level の作業ツリー（workspaces/which-level/画面修正）がレビュー途中で消えた
+body: レビューの途中で workspaces/which-level 配下が空になった（git worktree list には本体の main しか無い）。以降は本体リポジトリ（orca/which-level）で git show 4970eb0（origin/feature/7-find-screen-ui の先頭）を読んで確かめた。spec §1-3 が見た e4e9d5c とは別のコミットなので、impl のやり直しで事実を見るときは、どのコミットを根拠にしたかを記録すること。

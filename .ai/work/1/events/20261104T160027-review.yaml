@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:52
+fix: 「保存後すぐカメラを開くかどうか」/ "whether to open the camera right after saving" に直す。
+state: open
+summary: 設定項目「保存後すぐカメラを開く」を「自動撮影」と書いており、勝手に撮影するように読める
+body: index.html:52「自動撮影・振動・使用する地図アプリ・写真の保存期間などの設定」/ index.html:189「settings such as automatic camera, vibration, ...」。アプリの設定は auto_camera（lib/data/app_prefs.dart）で、画面の文言は「保存後すぐカメラを開く」/ "Open the camera right after saving"（lib/l10n/app_*.arb の settingsAutoCamera）。カメラ画面を開くだけで、撮影は利用者の操作による。ポリシーで「自動撮影」と書くと、利用者の操作なしにカメラで撮影するように読め、カメラ権限の用途の説明として誤解を招く。

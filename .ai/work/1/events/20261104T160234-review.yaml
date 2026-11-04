@@ -1,0 +1,8 @@
+node: review
+kind: run
+status: revert
+outcome: findings
+revert_to: impl
+reason: "Major 3件: iOSのバックアップ記載が実態と矛盾 / ML Kitの利用データ送信が未記載 / 追跡ファイルにローカル絶対パス"
+model: claude-opus-5-5
+summary: Major 3 / Minor 10。impl へ差し戻し

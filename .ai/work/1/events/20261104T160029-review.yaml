@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: .ai/work/1/events
+fix: impl をやり直すときに、spec 1-3 に無い記載を足した判断を decision として積み、1-5 の受入の観点ごとに確かめた結果を verification として積む。
+state: open
+summary: "この Issue に kind: decision / concern の event が 0 件"
+body: "計画との整合の観点 4。impl ノードは書き方の判断（AD_ID を断定して書く・iOS の広告識別子の扱い・13 歳以上の想定など、spec 1-3 に無い記載の追加）をしているが、decision / concern の event が 1 件も積まれていない。受入条件（AC-n）が spec に無く、kind: verification の event も無い（impl の summary は「ビルド/テスト手段は無く、タグの対応のみ確認」）。"

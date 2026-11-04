@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: legal.html:51
+fix: アプリのソース（4970eb0 の ios/Runner.xcodeproj/project.pbxproj）は TARGETED_DEVICE_FAMILY = "1,2" で iPad を含むので、記載は正しい。ページの修正は不要。spec §1-3 に iPad 対応を 1 行足す。
+state: open
+summary: 動作環境に iPad を挙げているが spec では iPad 対応を確かめていない
+body: "The system requirements line names iPad devices. Spec §1-3 only establishes Android 10+ and iOS 17+ and does not confirm iPad support. 故障シナリオ: If the app is iPhone-only, the legal notice describes a supported device that does not exist.（出典: /code-review）"

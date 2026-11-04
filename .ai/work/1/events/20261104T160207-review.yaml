@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: legal.html:49
+fix: アプリのソース（4970eb0 の lib/ui/settings_screen.dart:229）では設定画面の「広告なし版」欄に「購入を復元」があり、legal.html の記載は正しい。terms.html:55 / 132 も「設定画面の「購入を復元」」に揃えると食い違いが消える。
+state: open
+summary: 「購入を復元」の場所が特商法（設定画面）と利用規約（アプリ内）で書き方が違う
+body: "The legal notice says 'Restore purchase' is on the settings screen (アプリの設定画面の「購入を復元」). The Terms (terms.html:55/132) only say 'in the App', and the spec does not say where the button is. 故障シナリオ: If the restore button is on the paywall or purchase screen, the legal notice gives the wrong steps. Users cannot find the button, and the two documents contradict each other.（出典: /code-review）"

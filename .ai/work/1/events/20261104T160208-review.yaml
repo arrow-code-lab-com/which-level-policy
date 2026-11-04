@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: terms.html:88
+fix: 上限を「利用者が運営者に支払った金額、または〇〇円のいずれか高い額」のように無料利用者でも 0 にならない形にするか、参考元の条文と揃える判断を decision に残す。
+state: open
+summary: 責任の上限が「広告なし版の支払額」なので、無料の利用者には全部免責になり消費者契約法 8 条 1 項で無効になり得る
+body: "Liability is capped at the amount paid for the Ad-free version. For free users that cap is zero, which fully excludes liability for ordinary negligence. Article 8(1) of the Consumer Contract Act makes that kind of clause void. 故障シナリオ: For a free user who suffers damage, the clause is a full exemption and is void as written. Only the general 'subject to applicable law' wording saves it, so the clause does not limit liability the way the operator intends.（出典: /code-review）"

@@ -1,0 +1,15 @@
+node: review
+kind: checkpoint
+sha: 73e8f6b5500b112d1eb492105c638ad39ce3a0b4
+summary: 観点レビュー完了（指摘 6 件。Major 3・Minor 3）
+phase: rules
+detail: |
+  quality: 指摘 4 件（iOS バックアップの記載・ML Kit の送信の欠落・自動撮影の表現・権限一覧の欠落）
+  conventions: 指摘 1 件（追跡物への絶対パス）
+  security: 該当なし（静的 HTML。外部 CDN・外部スクリプト無し、リンクは https）
+  performance: 該当なし（静的 HTML のみ）
+  error-handling: 該当なし（処理は言語切替の関数だけ）
+  refactoring: 該当なし（参考元と同じ構造の複製で、共通化は FR-2 の範囲外）
+  test: 該当なし（テスト対象のコードが無い）
+  計画との整合: 指摘 1 件（decision/concern 0 件）。plan・task が無いので許可集合の判定は対象外
+  事実確認はアプリのソース 4970eb0（origin/feature/7-find-screen-ui）で行った。指定の作業ツリー（画面修正）はレビュー途中で消えたため git show で読んだ

@@ -1,0 +1,6 @@
+node: review
+kind: revert
+from: review
+to: impl
+reason: "Major 3件: iOSのバックアップ記載が実態と矛盾 / ML Kitの利用データ送信が未記載 / 追跡ファイルにローカル絶対パス"
+summary: "Major 3件: iOSのバックアップ記載が実態と矛盾 / ML Kitの利用データ送信が未記載 / 追跡ファイルにローカル絶対パス"

@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:61
+fix: "第 3 章に「広告・課金のための権限（Android: 広告 ID（AD_ID）、Google Play 課金（BILLING）、ネットワーク状態の確認 等。広告 SDK・課金ライブラリが追加します）: 第 4 章の広告配信と購入に使用します」を 1 行足す（日英）。ビルドしてマージ後のマニフェストを見られるなら、実際の一覧に合わせる。"
+state: open
+summary: 第 3 章の権限一覧に、SDK のマージで入る Android の権限（AD_ID・BILLING 等）が無い
+body: index.html:59-69 / 196-206 の第 3 章は、AndroidManifest.xml に直接書かれた ACCESS_FINE_LOCATION・ACCESS_COARSE_LOCATION・CAMERA・VIBRATE・INTERNET だけを挙げている。google_mobile_ads（play-services-ads）と in_app_purchase_android のマニフェストマージで、com.google.android.gms.permission.AD_ID、com.android.vending.BILLING、ACCESS_NETWORK_STATE、Privacy Sandbox の ACCESS_ADSERVICES_* が入るのが通例（spec U-2 も AD_ID は未確定としている）。Google Play の掲載ページにはマージ後の権限が表示されるので、ポリシーの一覧と見比べられたときに説明の無い権限が残る。第 4 章(3)で広告 ID の送信は書いているので、致命的ではない。

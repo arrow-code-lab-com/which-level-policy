@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Major
+at: terms.html:45
+fix: "terms.html 第 3 条の 2 項目めを OS 別に分ける（Android: バックアップ・移行の対象外で失われる / iOS: 端末の設定に応じて iCloud または端末のバックアップに含まれることがあり、運営者はそれを受け取らない）。index.html の第 5 章「データの安全管理」と第 7 章のアンインストールの記述にも iOS の行を足す（日英とも）。アプリ側で iOS もバックアップから外す方針にするなら、それは which-level 側の別対応として spec の未解決事項に書く。"
+state: open
+summary: iOS でもデータがバックアップされないと書いているが、iOS 版は iCloud／端末のバックアップと機種変更の移行の対象になる
+body: terms.html:45（日本語）「データはバックアップされません。端末の故障・紛失・機種変更、本アプリのアンインストール等によりデータは失われ、運営者は復元できません。」と terms.html:122（英語）「Data is not backed up. Data will be lost if the device fails, is lost, or is replaced ...」は Android・iOS を区別していない。which-level（4970eb0）では Android だけが allowBackup=false と data_extraction_rules.xml でクラウドバックアップ・端末間移行を除外している。iOS は DB（sqflite の getDatabasesPath）・写真と purchase_state.json（getApplicationSupportDirectory 配下）・設定（NSUserDefaults）をそのまま置いており、lib・ios のどこにも isExcludedFromBackup / NSURLIsExcludedFromBackupKey の指定は無い。iOS の既定では、これらは iCloud バックアップ・Finder のバックアップ・クイックスタートの移行に含まれるため、機種変更後もデータが残り得る。index.html:133 / 270 は Android だけを書いていて iOS の扱いに触れておらず、FR-4（OS の違いを同じ章で並べて書く）を満たしていない。index.html:143 / 280「アンインストールすると…すべて削除されます」も、iOS のバックアップ側に残る点が書かれていない。駐車位置・写真が Apple の iCloud（利用者のアカウント）に載る経路はプライバシーポリシーの記載対象で、App Store の App Privacy の申告と食い違う。

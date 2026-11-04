@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Major
+at: .ai/specs/assets/20261105-004552/review.html:5
+fix: 2 か所の値をリポジトリ相対（.ai/specs/assets/20261105-004552|…）に置き換える。確認ページの生成手順（ai-review-page）が絶対パスを埋めているなら、そちらの直しは concern として別に上げる。
+state: open
+summary: 追跡物の確認ページにローカルの絶対パス（ユーザー名を含む）が入っている
+body: .ai/specs/assets/20261105-004552/review.html:5 の meta name=fak-review の content と、同ファイル :75 の main 要素の data-key に、作業端末の絶対パス（C ドライブの Users/yano/orca/workspaces/which-level-policy/ポリシーの作成/.ai/specs/assets/20261105-004552。Windows のユーザー名を含む）が入ったままコミットされている（43de4d4）。このリポジトリは GitHub Pages で公開する前提（spec FR-1）で、公開リポジトリになる。計画との整合の観点 6（追跡物への絶対パスの混入）に当たる。

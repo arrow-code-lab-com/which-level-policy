@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Major
+at: index.html:121
+fix: "第 4 章に「(6) 文字認識（Google ML Kit）」を足す（送信先: Google LLC / 目的: 機能の性能・利用状況の計測と改善 / 送信される情報: 端末・アプリの情報、API の利用状況・性能・エラー。写真と読み取った文字は送らない / 詳細: https://developers.google.com/ml-kit/terms）。第 2 章冒頭の「第 4 章に記載したものに限られます」、第 6 章の列挙、121 行目の「外部送信 SDK を使用していません」をそれに合わせる。日英とも直す。"
+state: open
+summary: ML Kit が Google へ送る利用状況・性能の計測を書かず、分析目的の外部送信 SDK は無いと言い切っている
+body: index.html:49 / 186 は文字認識を Google ML Kit で端末内処理すると書き、index.html:121「本アプリは上記以外に、Firebase Analytics、Crashlytics 等の分析・クラッシュレポートを目的とした外部送信 SDK を使用していません。」/ 258（英語同旨）と第 4 章の一覧で外部送信を地図・住所変換・広告・課金・評価・地図アプリに限っている（index.html:43「外部へ送信される情報は、第 4 章に記載したものに限られます」、index.html:139 第 6 章も同じ）。which-level は google_mlkit_text_recognition（TextRecognitionScript.japanese）を使う。Google の ML Kit の規約・データ開示では、ML Kit の API は端末内処理であっても、API の性能・利用状況の計測（端末の機種・OS・アプリのパッケージ名とバージョン・API の設定・イベント種別・エラーコード等）を Google に送り、モデルや修正の取得のために Google のサーバーと通信することがあるとされている。Google Play のデータセーフティ（ML Kit の申告ガイドあり）・App Store の App Privacy の申告とポリシーの記載が食い違い、審査・申告の整合で指摘され得る。画像・読み取った文字が送られない点は正しい。

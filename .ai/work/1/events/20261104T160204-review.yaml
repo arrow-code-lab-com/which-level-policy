@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:92
+fix: "index.html:92 / 229 を「広告識別子（Android: 広告 ID を利用する場合があります）」/ \"may use the Advertising ID\" に直す。ビルドしてマージ後のマニフェストに AD_ID があると確かめられたら、断定のままでよい（その旨を decision として積む）。"
+state: open
+summary: Android の広告 ID の送信を断定しており、spec U-2 の「利用する場合がある」と書く指示に沿っていない
+body: "The policy states as fact that the Advertising ID is sent on Android (also in English, line 229). Spec U-2 says it is not yet known whether AD_ID gets merged in, and says to write that the ID 'may be used' (広告 ID を利用する場合がある). 故障シナリオ: If the merged manifest has no AD_ID permission, the policy and the Play Data safety form overstate what is collected. The text does not follow the spec's instruction for an unresolved item.（出典: /code-review）"

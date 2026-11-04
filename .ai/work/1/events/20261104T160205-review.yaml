@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:109
+fix: 観点レビューでアプリのソース（4970eb0）を見た範囲では記載どおり（lib/services/ads_service.dart は canRequestAds が true になるまで初期化・読み込みをしない。lib/ui/settings_screen.dart:314 で privacyOptionsRequired のときだけ「広告のプライバシー設定」を出す）。ページの修正は不要の見込み。裏付けを spec §1-3 に 1 行足すか、verification として積む。
+state: open
+summary: UMP の同意前に広告を読まない・設定画面に「広告のプライバシー設定」があるという記載の裏付けが spec に無い
+body: "The policy promises that no ads load until UMP consent is obtained, and that 'Ad privacy settings' are on the settings screen (also lines 146, 246, 283). Spec §9-2 says the AdMob and UMP setup was not checked, and §1-3 lists no such settings entry. 故障シナリオ: If the app requests ads before consent resolves, or has no 'Ad privacy settings' item, the published policy makes promises the app does not keep. That is a store-review and legal-accuracy risk.（出典: /code-review）"
