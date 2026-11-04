@@ -2,8 +2,8 @@
 issue: 1
 pr: 2
 flow: ai-default-medium
-status: requirements-success
-outcome: "案A: 参考元と同じ3ページ構成"
+status: impl-running
+outcome: null
 evidence:
   spec_status: draft
   has_issue: true
@@ -26,14 +26,14 @@ artifacts:
     - .ai/specs/spec-20261105-004552.md
     - .ai/specs/assets/20261105-004552/review.html
     - .ai/work/1/review.html
-events: 3
+events: 4
 ---
 
 # Issue #1 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `requirements-success`（outcome: 案A: 参考元と同じ3ページ構成）
+- 現在地: `impl-running`
 - フロー: `ai-default-medium` / 通過: `triage` → `requirements`
 - open な指摘: 0 件（Major 以上 0 件）
 
