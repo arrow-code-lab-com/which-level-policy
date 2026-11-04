@@ -1,0 +1,7 @@
+node: review
+kind: run
+status: success
+outcome: clean
+to: pr
+model: claude-opus-5-5
+summary: "再レビュー: Major 3件の解消を確認、新規指摘なし。Minor 2件 open（責任上限・decision event 0件）"

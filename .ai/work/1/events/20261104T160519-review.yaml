@@ -1,0 +1,14 @@
+node: review
+kind: checkpoint
+sha: 571f9928861a98d731bc0eb9bfe4f27ec184ff6d
+summary: 観点レビュー完了（re-review・新規指摘 0 件。前回 Major 3 件はすべて解消を確認）
+phase: rules
+detail: |
+  quality: 新規指摘なし（iOS バックアップの記載＝index.html:141-142/287-288・152/298・terms.html:45/122 で解消、ML Kit の送信＝index.html:122-127/268-273 と第 6 章で解消、設定名・SDK 権限・広告 ID・購入を復元の表記も解消。settingsAdFreeRestore で設定画面にあることを確認）
+  conventions: 新規指摘なし（review.html の絶対パスはリポジトリ相対に変更済み。追跡物の全体を grep して絶対パスの残り無し）
+  security: 該当なし（静的 HTML の文言変更のみ。追加リンクは https）
+  performance: 該当なし（静的 HTML の文言変更のみ）
+  error-handling: 該当なし（スクリプトの変更なし）
+  refactoring: 該当なし（文言変更のみ）
+  test: 該当なし（テスト対象のコードが無い）
+  計画との整合: 新規指摘なし。変更は前回指摘の修正 3 ファイルだけ。spec に AC-n が無く verification の照合は対象外。前回の Minor（decision/concern 0 件・terms.html:88 責任上限）は open のまま
