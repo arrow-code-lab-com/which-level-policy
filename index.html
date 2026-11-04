@@ -49,7 +49,7 @@
       <li><strong>写真から読み取った文字</strong>: 写真に写った柱番号や案内表示などの文字。文字の読み取りは、Google ML Kit の文字認識機能を使って<strong>端末内で処理</strong>し、写真を外部へ送信することはありません。</li>
       <li><strong>地名</strong>: 駐車位置の緯度・経度から取得した地名（第 4 章の住所変換を使用します）。</li>
       <li><strong>記録の状態</strong>: 記録の作成日時、駐車中か、車に戻ったか、戻った時刻。</li>
-      <li><strong>アプリの設定・利用状況</strong>: 初期設定の完了、最後に使用した日時と画面、自動撮影・振動・使用する地図アプリ・写真の保存期間などの設定、アプリの評価のお願いを表示した日時、起動にかかった時間などの記録。</li>
+      <li><strong>アプリの設定・利用状況</strong>: 初期設定の完了、最後に使用した日時と画面、保存後すぐカメラを開くか・振動・使用する地図アプリ・写真の保存期間などの設定、アプリの評価のお願いを表示した日時、起動にかかった時間などの記録。</li>
       <li><strong>購入状態</strong>: 「広告なし版」を購入済みかどうか。</li>
       <li><strong>地図の一時データ</strong>: 表示した地図の画像（地図タイル）のキャッシュ。</li>
     </ul>
@@ -67,6 +67,7 @@
     </ul>
     <p>このほか、車の方向を示すために端末の方位センサー（コンパス）を使用します。この利用に権限は必要なく、センサーの値は案内の表示にのみ使い、保存・送信しません。</p>
     <p>写真は本アプリ専用の保存領域に保存するため、本アプリは写真ライブラリ・ストレージへのアクセス権限を使用しません。また、マイク・連絡先の権限も使用しません。</p>
+    <p>Android では、第 4 章の広告・課金の SDK が、その機能に必要な権限（広告 ID の利用、課金、ネットワーク状態の確認等）を追加することがあります。</p>
 
     <h2>4. 第三者サービス（地図・住所変換・広告・課金）</h2>
     <p>本アプリは、以下の第三者サービスを利用しています。これらのサービスへの送信は、各サービスの提供者のプライバシーポリシーに従って取り扱われます。</p>
@@ -89,7 +90,7 @@
     <strong>利用目的</strong>: 広告の配信・効果測定<br>
     <strong>送信される情報</strong>:</p>
     <ul>
-      <li>広告識別子（Android: 広告 ID。iOS: 本アプリはトラッキングの許可（App Tracking Transparency）を求めないため、広告識別子（IDFA）は送信されません）</li>
+      <li>広告識別子（Android: 広告 ID が利用される場合があります。iOS: 本アプリはトラッキングの許可（App Tracking Transparency）を求めないため、広告識別子（IDFA）は送信されません）</li>
       <li>IP アドレス</li>
       <li>デバイス情報（端末モデル・OS バージョン等）</li>
       <li>おおよその位置情報（IP アドレス等に基づく場合があります。本アプリが記録した駐車位置を広告のために提供することはありません）</li>
@@ -118,6 +119,13 @@
     <p><strong>(5) 外部の地図アプリ</strong><br>
     車までの道順を表示するとき、利用者が選んだ地図アプリ（Google マップ / Apple マップ）を開き、駐車位置の緯度・経度を渡します。地図アプリでの取り扱いは、それぞれの提供者のプライバシーポリシーに従います。</p>
 
+    <p><strong>(6) 文字認識（Google ML Kit）</strong><br>
+    写真からの文字の読み取りは端末内で処理し、写真や読み取った文字は送信しません。ただし、ML Kit は機能の維持・改善のため、利用状況や性能に関する情報を Google に送信することがあります。<br>
+    <strong>送信先</strong>: Google LLC<br>
+    <strong>利用目的</strong>: ML Kit の動作状況の把握、機能の維持・改善<br>
+    <strong>送信される情報</strong>: デバイス情報（端末モデル・OS バージョン等）、アプリの情報、ML Kit の利用状況・性能に関する情報<br>
+    詳細: <a href="https://developers.google.com/ml-kit/terms">https://developers.google.com/ml-kit/terms</a></p>
+
     <p>なお、本アプリは上記以外に、Firebase Analytics、Crashlytics 等の分析・クラッシュレポートを目的とした外部送信 SDK を使用していません。プッシュ通知も使用しません。</p>
 
     <h2>5. データの保存場所と保持期間</h2>
@@ -130,17 +138,18 @@
     <p><strong>データの安全管理</strong>:</p>
     <ul>
       <li>利用者のデータは、他のアプリからアクセスできない本アプリ専用の保存領域に保存します。</li>
-      <li>Android では、データを端末のバックアップおよび端末間の移行の対象外としています。機種変更や本アプリのアンインストールの際は、データは引き継がれずに失われますのでご注意ください。</li>
+      <li><strong>Android</strong>: データを端末のバックアップおよび端末間の移行の対象外としています。機種変更や本アプリのアンインストールの際は、データは引き継がれずに失われますのでご注意ください。</li>
+      <li><strong>iOS</strong>: 利用者の端末の設定により、本アプリのデータが iCloud バックアップやパソコンへのバックアップに含まれ、機種変更の際に新しい端末へ引き継がれることがあります。バックアップは Apple および利用者の管理下にあり、運営者がその内容を取得することはありません。</li>
       <li>本アプリ独自のデータ暗号化は行っていません。端末の画面ロック等を設定し、端末を適切に管理してください。</li>
     </ul>
 
     <h2>6. 第三者提供</h2>
     <p>運営者は、利用者の端末内データを取得しないため、これを第三者へ提供することはありません。</p>
-    <p>第三者へのデータの送信は、第 4 章に記載した地図の表示、住所変換、広告配信、アプリ内課金、ストアの評価、外部の地図アプリに関するもののみです。それ以外の目的で第三者へ利用者データを提供・販売することはありません。</p>
+    <p>第三者へのデータの送信は、第 4 章に記載した地図の表示、住所変換、広告配信、アプリ内課金、ストアの評価、外部の地図アプリ、文字認識に関するもののみです。それ以外の目的で第三者へ利用者データを提供・販売することはありません。</p>
 
     <h2>7. 利用者の権利（データの削除・広告 ID のリセット）</h2>
     <ul>
-      <li><strong>端末内データの削除</strong>: 本アプリの履歴画面から、駐車の記録を 1 件ずつ削除できます。設定画面の「すべてのデータを削除」を使うと、記録・写真・設定・地図の一時データをまとめて削除できます（「広告なし版」の購入状態は残ります）。本アプリをアンインストールすると、端末内に保存された本アプリのデータはすべて削除されます。購入は、再インストール後に購入の復元で戻せます。</li>
+      <li><strong>端末内データの削除</strong>: 本アプリの履歴画面から、駐車の記録を 1 件ずつ削除できます。設定画面の「すべてのデータを削除」を使うと、記録・写真・設定・地図の一時データをまとめて削除できます（「広告なし版」の購入状態は残ります）。本アプリをアンインストールすると、端末内に保存された本アプリのデータはすべて削除されます（iOS で iCloud 等のバックアップに含まれたデータは、そのバックアップを削除するまで残ります）。購入は、再インストール後に設定画面の「購入を復元」で戻せます。</li>
       <li><strong>位置情報・カメラの利用の停止</strong>: 端末の「設定」から、本アプリの位置情報・カメラの許可をいつでも取り消せます（Android: 「設定」&rarr;「アプリ」&rarr; 本アプリ &rarr;「権限」/ iOS: 「設定」&rarr; 本アプリ）。取り消した後は、駐車位置の記録や写真の撮影ができなくなります。</li>
       <li><strong>広告 ID のリセット／削除（Android）</strong>: Android の「設定」&rarr;「Google」&rarr;「広告」から、広告 ID のリセットまたは削除、およびパーソナライズ広告のオプトアウトが可能です。</li>
       <li><strong>広告に関する同意の変更</strong>: 同意が必要な地域では、本アプリの設定画面の「広告のプライバシー設定」から変更できます。</li>
@@ -186,7 +195,7 @@
       <li><strong>Text read from photos</strong>: Text in photos, such as pillar numbers and signs. Text recognition is <strong>processed on the device</strong> using Google ML Kit, and photos are never sent outside the device.</li>
       <li><strong>Place names</strong>: The place name obtained from the latitude and longitude of the parking location (using the reverse geocoding described in Section 4).</li>
       <li><strong>Record status</strong>: When each record was created, whether the car is still parked or you have returned to it, and when you returned.</li>
-      <li><strong>App settings and usage</strong>: Whether initial setup is complete, the last time and screen used, settings such as automatic camera, vibration, preferred map app and photo retention period, when the App last asked for a store rating, and startup timing records.</li>
+      <li><strong>App settings and usage</strong>: Whether initial setup is complete, the last time and screen used, settings such as whether to open the camera right after saving, vibration, preferred map app and photo retention period, when the App last asked for a store rating, and startup timing records.</li>
       <li><strong>Purchase status</strong>: Whether the "Ad-free version" has been purchased.</li>
       <li><strong>Temporary map data</strong>: A cache of map images (map tiles) that have been displayed.</li>
     </ul>
@@ -204,6 +213,7 @@
     </ul>
     <p>In addition, the App uses the device's compass to show the direction of the car. No permission is required for this, and the sensor values are used only for the guidance display and are neither stored nor transmitted.</p>
     <p>Because photos are saved in the App's private storage area, the App does not use permissions to access the photo library or storage. It also does not use the microphone or contacts permissions.</p>
+    <p>On Android, the advertising and billing SDKs described in Section 4 may add permissions needed for their functions (such as use of the Advertising ID, billing, and checking the network state).</p>
 
     <h2>4. Third-Party Services (Maps, Reverse Geocoding, Advertising and Billing)</h2>
     <p>The App uses the following third-party services. Data sent to these services is handled in accordance with the privacy policy of each provider.</p>
@@ -226,7 +236,7 @@
     <strong>Purpose</strong>: Delivering ads and measuring their effectiveness<br>
     <strong>Information sent</strong>:</p>
     <ul>
-      <li>Advertising identifier (Android: Advertising ID. iOS: the App does not request tracking permission (App Tracking Transparency), so the advertising identifier (IDFA) is not sent)</li>
+      <li>Advertising identifier (Android: the Advertising ID may be used. iOS: the App does not request tracking permission (App Tracking Transparency), so the advertising identifier (IDFA) is not sent)</li>
       <li>IP address</li>
       <li>Device information (device model, OS version, etc.)</li>
       <li>Approximate location (which may be based on the IP address, etc. The parking locations recorded by the App are never provided for advertising)</li>
@@ -255,6 +265,13 @@
     <p><strong>(5) External map apps</strong><br>
     When showing directions to the car, the App opens the map app chosen by the user (Google Maps / Apple Maps) and passes it the latitude and longitude of the parking location. Handling in the map app is subject to the privacy policy of its provider.</p>
 
+    <p><strong>(6) Text recognition (Google ML Kit)</strong><br>
+    Text recognition from photos is processed on the device, and neither photos nor the recognized text are sent. However, ML Kit may send information about its usage and performance to Google in order to maintain and improve the feature.<br>
+    <strong>Recipient</strong>: Google LLC<br>
+    <strong>Purpose</strong>: Monitoring how ML Kit operates, and maintaining and improving the feature<br>
+    <strong>Information sent</strong>: Device information (device model, OS version, etc.), app information, and information about ML Kit usage and performance<br>
+    Details: <a href="https://developers.google.com/ml-kit/terms">https://developers.google.com/ml-kit/terms</a></p>
+
     <p>Other than the above, the App does not use any SDKs that send data externally for analytics or crash reporting, such as Firebase Analytics or Crashlytics. The App also does not use push notifications.</p>
 
     <h2>5. Data Storage Location and Retention Period</h2>
@@ -267,17 +284,18 @@
     <p><strong>Data security</strong>:</p>
     <ul>
       <li>User data is stored in the App's private storage area, which cannot be accessed by other apps.</li>
-      <li>On Android, data is excluded from device backup and device-to-device transfer. Please note that data will not be carried over and will be lost when changing devices or uninstalling the App.</li>
+      <li><strong>Android</strong>: Data is excluded from device backup and device-to-device transfer. Please note that data will not be carried over and will be lost when changing devices or uninstalling the App.</li>
+      <li><strong>iOS</strong>: Depending on the user's device settings, the App's data may be included in iCloud backups or backups to a computer, and may be carried over to a new device when changing devices. Backups are under the control of Apple and the user, and the operator does not obtain their contents.</li>
       <li>The App does not apply its own data encryption. Please manage your device appropriately, for example by setting a screen lock.</li>
     </ul>
 
     <h2>6. Provision to Third Parties</h2>
     <p>Because the operator does not obtain the data on the user's device, the operator does not provide it to third parties.</p>
-    <p>Data is sent to third parties only for the map display, reverse geocoding, ad delivery, in-app purchases, store ratings and external map apps described in Section 4. User data is not provided to or sold to third parties for any other purpose.</p>
+    <p>Data is sent to third parties only for the map display, reverse geocoding, ad delivery, in-app purchases, store ratings, external map apps and text recognition described in Section 4. User data is not provided to or sold to third parties for any other purpose.</p>
 
     <h2>7. User Rights (Data Deletion and Advertising ID Reset)</h2>
     <ul>
-      <li><strong>Deleting on-device data</strong>: Parking records can be deleted one at a time from the App's history screen. "Delete all data" on the settings screen deletes all records, photos, settings and temporary map data at once (the purchase status of the "Ad-free version" is kept). Uninstalling the App deletes all of the App's data stored on the device. Purchases can be recovered by restoring purchases after reinstalling.</li>
+      <li><strong>Deleting on-device data</strong>: Parking records can be deleted one at a time from the App's history screen. "Delete all data" on the settings screen deletes all records, photos, settings and temporary map data at once (the purchase status of the "Ad-free version" is kept). Uninstalling the App deletes all of the App's data stored on the device (on iOS, data included in iCloud or other backups remains until that backup is deleted). Purchases can be recovered with "Restore purchase" on the settings screen after reinstalling.</li>
       <li><strong>Stopping the use of location and camera</strong>: You can revoke the App's location and camera permissions at any time from the device settings (Android: "Settings" &rarr; "Apps" &rarr; this App &rarr; "Permissions" / iOS: "Settings" &rarr; this App). After revoking them, the App can no longer record parking locations or take photos.</li>
       <li><strong>Resetting / deleting the Advertising ID (Android)</strong>: From the Android "Settings" &rarr; "Google" &rarr; "Ads", the user can reset or delete the advertising ID and opt out of personalized advertising.</li>
       <li><strong>Changing consent for advertising</strong>: In regions where consent is required, the user can change it from "Ad privacy settings" on the App's settings screen.</li>
