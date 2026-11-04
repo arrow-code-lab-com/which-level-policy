@@ -1,0 +1,12 @@
+node: impl
+kind: run
+status: success
+outcome: 実装完了
+to: review
+sha: 73e8f6b
+artifacts:
+  - index.html
+  - terms.html
+  - legal.html
+model: claude-opus-5-5
+summary: index.html・terms.html・legal.html（日英切替・Android/iOS兼用）を追加。ビルド/テスト手段は無く、タグの対応のみ確認
