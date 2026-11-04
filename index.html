@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー / Privacy Policy - 何階だっけ / Which Level?</title>
+<style>
+  :root { --fg:#1a1a1a; --muted:#555; --accent:#1565c0; --border:#ddd; --bg:#fff; --note:#fff8e1; --noteborder:#f0c000; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif; color: var(--fg); background: var(--bg); line-height: 1.8; margin: 0; padding: 0; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 24px 20px 64px; }
+  h1 { font-size: 1.6rem; border-bottom: 3px solid var(--accent); padding-bottom: 8px; }
+  h2 { font-size: 1.2rem; margin-top: 2em; border-left: 5px solid var(--accent); padding-left: 10px; }
+  a { color: var(--accent); word-break: break-all; }
+  .note { background: var(--note); border: 1px solid var(--noteborder); border-radius: 6px; padding: 12px 16px; margin: 16px 0; }
+  .meta { color: var(--muted); font-size: 0.95rem; }
+  .toggle { position: sticky; top: 0; background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--border); z-index: 10; }
+  .toggle button { font: inherit; padding: 6px 18px; margin-right: 8px; border: 1px solid var(--accent); background: var(--bg); color: var(--accent); border-radius: 20px; cursor: pointer; }
+  .toggle button.active { background: var(--accent); color: #fff; }
+  ul { padding-left: 1.4em; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="toggle">
+    <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ============ 日本語版 ============ -->
+  <section id="lang-ja">
+    <h1>プライバシーポリシー（何階だっけ）</h1>
+    <p class="meta"><strong>最終改定日: 2026年11月5日 / 施行日: 2026年11月5日（初版）</strong></p>
+
+    <h2>1. 適用範囲とアプリ情報</h2>
+    <p>本プライバシーポリシー（以下「本ポリシー」）は、個人開発者（Individual Developer）〔運営者: Arrow Code Lab〕が提供するモバイルアプリケーション「何階だっけ」（英語名: Which Level?、Android のパッケージ名および iOS のバンドル ID: com.arrowcodelab.whichlevel、以下「本アプリ」）における利用者情報の取り扱いについて定めるものです。</p>
+    <p>本アプリは、自分の車を停めた場所（位置・階・柱番号・写真・メモ）を記録し、車まで案内するアプリケーションです。Android 版（Google Play で配信）と iOS 版（App Store で配信）があり、本ポリシーは両方に共通して適用されます。Android と iOS で取り扱いが異なる点は、各章で個別に記載します。</p>
+    <p>本アプリは、欧州経済領域（EEA）、英国およびスイスでは提供していません。</p>
+
+    <h2>2. 本アプリで取り扱う情報</h2>
+    <p>本アプリでは、以下の情報を扱います。これらの情報は<strong>すべて利用者の端末内に保存され、運営者のサーバーへ送信されることはありません</strong>（本アプリは運営者が管理するサーバーを持ちません）。外部へ送信される情報は、第 4 章に記載したものに限られます。</p>
+    <ul>
+      <li><strong>駐車位置（位置情報）</strong>: 駐車した場所の緯度・経度とその精度。本アプリを開いたときに、その時刻と現在地を駐車の記録として自動で保存します。車までの距離・方向の案内にも現在地を使用します。</li>
+      <li><strong>気圧</strong>: 駐車場の何階にいるかを判定するために、端末の気圧センサーで計測した気圧とその計測時刻。</li>
+      <li><strong>利用者が入力した情報</strong>: 階・柱番号・メモ・お気に入りの設定。</li>
+      <li><strong>写真</strong>: 本アプリ内のカメラで撮影した駐車場所の周りの写真（1 件の記録につき 5 枚まで。音声は記録しません）。写真は本アプリ専用の保存領域に保存され、端末の写真ギャラリーには表示されません。</li>
+      <li><strong>写真から読み取った文字</strong>: 写真に写った柱番号や案内表示などの文字。文字の読み取りは、Google ML Kit の文字認識機能を使って<strong>端末内で処理</strong>し、写真を外部へ送信することはありません。</li>
+      <li><strong>地名</strong>: 駐車位置の緯度・経度から取得した地名（第 4 章の住所変換を使用します）。</li>
+      <li><strong>記録の状態</strong>: 記録の作成日時、駐車中か、車に戻ったか、戻った時刻。</li>
+      <li><strong>アプリの設定・利用状況</strong>: 初期設定の完了、最後に使用した日時と画面、自動撮影・振動・使用する地図アプリ・写真の保存期間などの設定、アプリの評価のお願いを表示した日時、起動にかかった時間などの記録。</li>
+      <li><strong>購入状態</strong>: 「広告なし版」を購入済みかどうか。</li>
+      <li><strong>地図の一時データ</strong>: 表示した地図の画像（地図タイル）のキャッシュ。</li>
+    </ul>
+    <p>本アプリには、アカウント登録・ログインの機能はありません。氏名・メールアドレス・電話番号・連絡先などの情報は取得しません。</p>
+    <p><strong>共有について</strong>: 本アプリの共有機能を使うと、駐車位置を示す Google マップの URL（緯度・経度を含みます）、階・柱番号、時刻が、端末の共有機能を通じて利用者が選んだ共有先（メッセージアプリ等）へ渡されます。共有先への送信は利用者の操作によるものであり、本アプリが送信先を制御することはありません。共有する相手をご確認ください。</p>
+
+    <h2>3. 端末の権限とその用途</h2>
+    <p>本アプリは、機能提供のために以下の権限を使用します。権限は該当機能の利用時に要求され、利用者が許可を拒否した場合、当該機能が利用できないことがあります。</p>
+    <ul>
+      <li><strong>位置情報</strong>（Android: ACCESS_FINE_LOCATION、ACCESS_COARSE_LOCATION / iOS: 使用中の位置情報）: 駐車位置の記録と、車までの案内に使用します。位置は本アプリの使用中のみ取得し、<strong>バックグラウンドでは取得しません</strong>。iOS で「おおよその位置」のみを許可している場合は、駐車位置の記録と案内のときに限り、一時的に正確な位置の使用を求めることがあります。</li>
+      <li><strong>カメラ</strong>（Android: CAMERA / iOS: カメラ）: 駐車場所の周りの写真の撮影に使用します。許可しなくても、メモなどの記録は保存できます。</li>
+      <li><strong>モーションセンサー</strong>（iOS: モーションとフィットネス）: 気圧の計測により、駐車場の何階にいるかを判定するために使用します。Android では、気圧センサーの使用に権限は必要ありません。</li>
+      <li><strong>振動</strong>（Android: VIBRATE）: 操作時や案内時の振動に使用します。</li>
+      <li><strong>インターネット</strong>（Android: INTERNET）: 第 4 章に記載した地図・住所変換・広告・課金の通信に使用します。</li>
+    </ul>
+    <p>このほか、車の方向を示すために端末の方位センサー（コンパス）を使用します。この利用に権限は必要なく、センサーの値は案内の表示にのみ使い、保存・送信しません。</p>
+    <p>写真は本アプリ専用の保存領域に保存するため、本アプリは写真ライブラリ・ストレージへのアクセス権限を使用しません。また、マイク・連絡先の権限も使用しません。</p>
+
+    <h2>4. 第三者サービス（地図・住所変換・広告・課金）</h2>
+    <p>本アプリは、以下の第三者サービスを利用しています。これらのサービスへの送信は、各サービスの提供者のプライバシーポリシーに従って取り扱われます。</p>
+
+    <p><strong>(1) 地図の表示（OpenStreetMap）</strong><br>
+    <strong>送信先</strong>: OpenStreetMap Foundation（地図タイルの配信サーバー）<br>
+    <strong>利用目的</strong>: 駐車位置の周りの地図の表示<br>
+    <strong>送信される情報</strong>: 表示する地図の範囲（駐車位置や現在地の周辺を示します）、IP アドレス、本アプリの識別名<br>
+    詳細: <a href="https://osmfoundation.org/wiki/Privacy_Policy">https://osmfoundation.org/wiki/Privacy_Policy</a></p>
+
+    <p><strong>(2) 住所変換（逆ジオコーディング）</strong><br>
+    <strong>送信先</strong>: Android では Google LLC、iOS では Apple Inc.（いずれも端末の OS が提供する住所変換機能を通じて送信されます）<br>
+    <strong>利用目的</strong>: 駐車位置の緯度・経度から地名を取得するため<br>
+    <strong>送信される情報</strong>: 駐車位置の緯度・経度<br>
+    詳細: Google プライバシーポリシー <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> / Apple プライバシーポリシー <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></p>
+
+    <p><strong>(3) 広告（Google AdMob）</strong><br>
+    本アプリは、広告配信のために Google が提供する <strong>Google AdMob（Google Mobile Ads）</strong> を利用し、画面にバナー広告を表示します（「広告なし版」の購入後は表示しません）。<br>
+    <strong>送信先</strong>: Google LLC およびその関連会社、Google の広告パートナー<br>
+    <strong>利用目的</strong>: 広告の配信・効果測定<br>
+    <strong>送信される情報</strong>:</p>
+    <ul>
+      <li>広告識別子（Android: 広告 ID。iOS: 本アプリはトラッキングの許可（App Tracking Transparency）を求めないため、広告識別子（IDFA）は送信されません）</li>
+      <li>IP アドレス</li>
+      <li>デバイス情報（端末モデル・OS バージョン等）</li>
+      <li>おおよその位置情報（IP アドレス等に基づく場合があります。本アプリが記録した駐車位置を広告のために提供することはありません）</li>
+      <li>広告に関するアプリ内の操作・利用状況</li>
+    </ul>
+    <p><strong>Android と iOS の違い</strong>:</p>
+    <ul>
+      <li><strong>Android</strong>: 利用者の興味・関心に基づく広告（パーソナライズ広告）が表示されることがあります。パーソナライズ広告は、第 7 章の方法でオプトアウトできます。</li>
+      <li><strong>iOS</strong>: パーソナライズされていない広告のみを表示します。他社のアプリやウェブサイトをまたいで利用者を追跡することはありません。</li>
+    </ul>
+    <p>実際に収集されるデータの種別は、利用者の設定・地域・同意状況等により異なります。AdMob によるデータの取り扱いの詳細、およびパーソナライズ広告のオプトアウトについては、以下の Google のドキュメントをご確認ください。</p>
+    <ul>
+      <li>Google プライバシーポリシー: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+      <li>Google 広告設定（パーソナライズ広告の管理）: <a href="https://adssettings.google.com/">https://adssettings.google.com/</a></li>
+      <li>AdMob のデータ開示: <a href="https://support.google.com/admob/answer/6128543">https://support.google.com/admob/answer/6128543</a></li>
+    </ul>
+    <p><strong>広告に関する同意</strong>: 法令により同意が必要な地域では、Google の User Messaging Platform（UMP）を使用して、広告の表示前に同意を確認します。同意が得られるまで広告は読み込みません。同意の内容は、本アプリの設定画面の「広告のプライバシー設定」からいつでも変更できます（同意の変更が必要な地域でのみ表示されます）。</p>
+
+    <p><strong>(4) アプリ内課金（Google Play / App Store）</strong><br>
+    本アプリの「広告なし版」（買い切り）は、Android では Google Play、iOS では App Store の課金システムを通じて購入します。支払い情報（クレジットカード等）は Google または Apple が処理し、運営者が受け取ることはありません。本アプリは、購入済みかどうかを確認するために各ストアから購入状態を取得し、その結果を端末内に記録します。<br>
+    <strong>送信先</strong>: Android では Google LLC およびその関連会社（Google Play）、iOS では Apple Inc.（App Store）<br>
+    <strong>利用目的</strong>: 購入の処理、購入状態の確認、購入の復元、価格の表示<br>
+    <strong>送信される情報</strong>: 購入に関する情報（商品、購入の状態等）</p>
+    <p>また、本アプリはストアの評価画面（Google Play のアプリ内レビュー / App Store の評価）を表示することがあります。評価の送信は各ストアが処理し、運営者は評価の内容を受け取りません。</p>
+
+    <p><strong>(5) 外部の地図アプリ</strong><br>
+    車までの道順を表示するとき、利用者が選んだ地図アプリ（Google マップ / Apple マップ）を開き、駐車位置の緯度・経度を渡します。地図アプリでの取り扱いは、それぞれの提供者のプライバシーポリシーに従います。</p>
+
+    <p>なお、本アプリは上記以外に、Firebase Analytics、Crashlytics 等の分析・クラッシュレポートを目的とした外部送信 SDK を使用していません。プッシュ通知も使用しません。</p>
+
+    <h2>5. データの保存場所と保持期間</h2>
+    <ul>
+      <li>第 2 章に記載した情報は、<strong>すべて利用者の端末内に保存</strong>されます。運営者はこれらのデータを保有・保管しません。</li>
+      <li>駐車の記録は、利用者が削除するか、本アプリのデータを削除するか、本アプリをアンインストールするまで端末内に保持されます。</li>
+      <li>車に戻った後の記録の写真は、設定した保存期間（初期設定は 90 日。30 日・90 日・180 日・365 日から選べます）を過ぎると自動で削除します。お気に入りに登録した記録の写真は削除しません。</li>
+      <li>第 4 章の第三者サービスを通じて各提供者が収集するデータの保持期間は、各提供者のプライバシーポリシーに従います。</li>
+    </ul>
+    <p><strong>データの安全管理</strong>:</p>
+    <ul>
+      <li>利用者のデータは、他のアプリからアクセスできない本アプリ専用の保存領域に保存します。</li>
+      <li>Android では、データを端末のバックアップおよび端末間の移行の対象外としています。機種変更や本アプリのアンインストールの際は、データは引き継がれずに失われますのでご注意ください。</li>
+      <li>本アプリ独自のデータ暗号化は行っていません。端末の画面ロック等を設定し、端末を適切に管理してください。</li>
+    </ul>
+
+    <h2>6. 第三者提供</h2>
+    <p>運営者は、利用者の端末内データを取得しないため、これを第三者へ提供することはありません。</p>
+    <p>第三者へのデータの送信は、第 4 章に記載した地図の表示、住所変換、広告配信、アプリ内課金、ストアの評価、外部の地図アプリに関するもののみです。それ以外の目的で第三者へ利用者データを提供・販売することはありません。</p>
+
+    <h2>7. 利用者の権利（データの削除・広告 ID のリセット）</h2>
+    <ul>
+      <li><strong>端末内データの削除</strong>: 本アプリの履歴画面から、駐車の記録を 1 件ずつ削除できます。設定画面の「すべてのデータを削除」を使うと、記録・写真・設定・地図の一時データをまとめて削除できます（「広告なし版」の購入状態は残ります）。本アプリをアンインストールすると、端末内に保存された本アプリのデータはすべて削除されます。購入は、再インストール後に購入の復元で戻せます。</li>
+      <li><strong>位置情報・カメラの利用の停止</strong>: 端末の「設定」から、本アプリの位置情報・カメラの許可をいつでも取り消せます（Android: 「設定」&rarr;「アプリ」&rarr; 本アプリ &rarr;「権限」/ iOS: 「設定」&rarr; 本アプリ）。取り消した後は、駐車位置の記録や写真の撮影ができなくなります。</li>
+      <li><strong>広告 ID のリセット／削除（Android）</strong>: Android の「設定」&rarr;「Google」&rarr;「広告」から、広告 ID のリセットまたは削除、およびパーソナライズ広告のオプトアウトが可能です。</li>
+      <li><strong>広告に関する同意の変更</strong>: 同意が必要な地域では、本アプリの設定画面の「広告のプライバシー設定」から変更できます。</li>
+    </ul>
+
+    <h2>8. 子どものプライバシー</h2>
+    <p>本アプリは一般利用者（13 歳以上を想定）を対象としており、<strong>13 歳未満の子どもを対象としていません</strong>。本アプリは、子どもから意図的に個人情報を収集することはありません。</p>
+
+    <h2>9. 準拠法</h2>
+    <p>本ポリシーは、日本法に準拠します。</p>
+
+    <h2>10. 本ポリシーの改定</h2>
+    <p>運営者は、法令の変更やサービス内容の変更に応じて、本ポリシーを改定することがあります。重要な変更を行う場合は、本ポリシーの公開ページ上で告知します。改定後の本ポリシーは、公開ページに掲載された時点から効力を生じます。</p>
+    <ul>
+      <li>最終改定日: 2026年11月5日</li>
+      <li>関連文書: <a href="./terms.html">利用規約</a> / <a href="./legal.html">特定商取引法に基づく表記</a></li>
+    </ul>
+
+    <h2>11. お問い合わせ</h2>
+    <p>本ポリシーまたは本アプリのデータの取り扱いに関するお問い合わせは、以下の連絡先までご連絡ください。</p>
+    <ul>
+      <li>連絡先メールアドレス: arrow.code.lab@gmail.com</li>
+    </ul>
+  </section>
+
+  <!-- ============ English version ============ -->
+  <section id="lang-en" hidden>
+    <h1>Privacy Policy (Which Level?)</h1>
+    <p class="meta"><strong>Last updated: November 5, 2026 / Effective date: November 5, 2026 (initial version)</strong></p>
+
+    <h2>1. Scope and App Information</h2>
+    <p>This Privacy Policy (the "Policy") sets out how user information is handled in the mobile application "Which Level?" (Japanese name: 何階だっけ; Android package name and iOS bundle ID: com.arrowcodelab.whichlevel, the "App"), provided by an Individual Developer [operator: Arrow Code Lab].</p>
+    <p>The App records where you parked your car (location, level, pillar number, photos and notes) and guides you back to it. It is available for Android (distributed on Google Play) and iOS (distributed on the App Store), and this Policy applies to both. Where Android and iOS differ, this is stated in the relevant section.</p>
+    <p>The App is not offered in the European Economic Area (EEA), the United Kingdom, or Switzerland.</p>
+
+    <h2>2. Information Handled by the App</h2>
+    <p>The App handles the following information. All of this information is <strong>stored locally on the user's device and is never sent to the operator's servers</strong> (the App has no servers managed by the operator). Information sent outside the device is limited to what is described in Section 4.</p>
+    <ul>
+      <li><strong>Parking location (location information)</strong>: The latitude, longitude and accuracy of where the car is parked. When the App is opened, it automatically saves the time and current location as a parking record. The current location is also used to show the distance and direction to the car.</li>
+      <li><strong>Air pressure</strong>: The air pressure measured by the device's barometer, and when it was measured, used to determine which level of the parking structure you are on.</li>
+      <li><strong>Information entered by the user</strong>: Level, pillar number, notes, and favorites.</li>
+      <li><strong>Photos</strong>: Photos of the surroundings of the parking spot taken with the App's camera (up to 5 per record; no audio is recorded). Photos are saved in the App's private storage area and do not appear in the device's photo gallery.</li>
+      <li><strong>Text read from photos</strong>: Text in photos, such as pillar numbers and signs. Text recognition is <strong>processed on the device</strong> using Google ML Kit, and photos are never sent outside the device.</li>
+      <li><strong>Place names</strong>: The place name obtained from the latitude and longitude of the parking location (using the reverse geocoding described in Section 4).</li>
+      <li><strong>Record status</strong>: When each record was created, whether the car is still parked or you have returned to it, and when you returned.</li>
+      <li><strong>App settings and usage</strong>: Whether initial setup is complete, the last time and screen used, settings such as automatic camera, vibration, preferred map app and photo retention period, when the App last asked for a store rating, and startup timing records.</li>
+      <li><strong>Purchase status</strong>: Whether the "Ad-free version" has been purchased.</li>
+      <li><strong>Temporary map data</strong>: A cache of map images (map tiles) that have been displayed.</li>
+    </ul>
+    <p>The App has no account registration or login. It does not collect names, email addresses, phone numbers, contacts or similar information.</p>
+    <p><strong>Sharing</strong>: When the user uses the App's share function, a Google Maps URL showing the parking location (including latitude and longitude), the level, the pillar number and the time are passed through the device's share function to the destination the user chooses (such as a messaging app). Sending to the destination is performed by the user's own action, and the App does not control the destination. Please check who you are sharing with.</p>
+
+    <h2>3. Device Permissions and Their Uses</h2>
+    <p>The App uses the following permissions to provide its features. Permissions are requested when the relevant feature is used, and if the user denies a permission, the corresponding feature may not be available.</p>
+    <ul>
+      <li><strong>Location</strong> (Android: ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION / iOS: location while using the App): Used to record the parking location and to guide you back to the car. Location is obtained only while the App is in use and is <strong>never obtained in the background</strong>. On iOS, if only "approximate location" is allowed, the App may ask for temporary use of precise location, only when recording the parking location and guiding you back.</li>
+      <li><strong>Camera</strong> (Android: CAMERA / iOS: Camera): Used to take photos of the surroundings of the parking spot. Records such as notes can still be saved without this permission.</li>
+      <li><strong>Motion sensors</strong> (iOS: Motion &amp; Fitness): Used to determine which level of the parking structure you are on by measuring air pressure. On Android, no permission is needed to use the barometer.</li>
+      <li><strong>Vibration</strong> (Android: VIBRATE): Used for vibration feedback during operation and guidance.</li>
+      <li><strong>Internet</strong> (Android: INTERNET): Used for the map, reverse geocoding, advertising and billing communications described in Section 4.</li>
+    </ul>
+    <p>In addition, the App uses the device's compass to show the direction of the car. No permission is required for this, and the sensor values are used only for the guidance display and are neither stored nor transmitted.</p>
+    <p>Because photos are saved in the App's private storage area, the App does not use permissions to access the photo library or storage. It also does not use the microphone or contacts permissions.</p>
+
+    <h2>4. Third-Party Services (Maps, Reverse Geocoding, Advertising and Billing)</h2>
+    <p>The App uses the following third-party services. Data sent to these services is handled in accordance with the privacy policy of each provider.</p>
+
+    <p><strong>(1) Map display (OpenStreetMap)</strong><br>
+    <strong>Recipient</strong>: OpenStreetMap Foundation (map tile servers)<br>
+    <strong>Purpose</strong>: Displaying the map around the parking location<br>
+    <strong>Information sent</strong>: The map area to be displayed (which indicates the area around the parking location or current location), IP address, and the App's identifier<br>
+    Details: <a href="https://osmfoundation.org/wiki/Privacy_Policy">https://osmfoundation.org/wiki/Privacy_Policy</a></p>
+
+    <p><strong>(2) Reverse geocoding</strong><br>
+    <strong>Recipient</strong>: Google LLC on Android and Apple Inc. on iOS (sent through the geocoding function provided by the device's operating system)<br>
+    <strong>Purpose</strong>: Obtaining a place name from the latitude and longitude of the parking location<br>
+    <strong>Information sent</strong>: The latitude and longitude of the parking location<br>
+    Details: Google Privacy Policy <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> / Apple Privacy Policy <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></p>
+
+    <p><strong>(3) Advertising (Google AdMob)</strong><br>
+    The App uses <strong>Google AdMob (Google Mobile Ads)</strong>, provided by Google, to display banner ads (ads are not shown after purchasing the "Ad-free version").<br>
+    <strong>Recipient</strong>: Google LLC and its affiliates, and Google's advertising partners<br>
+    <strong>Purpose</strong>: Delivering ads and measuring their effectiveness<br>
+    <strong>Information sent</strong>:</p>
+    <ul>
+      <li>Advertising identifier (Android: Advertising ID. iOS: the App does not request tracking permission (App Tracking Transparency), so the advertising identifier (IDFA) is not sent)</li>
+      <li>IP address</li>
+      <li>Device information (device model, OS version, etc.)</li>
+      <li>Approximate location (which may be based on the IP address, etc. The parking locations recorded by the App are never provided for advertising)</li>
+      <li>In-app interactions and usage related to ads</li>
+    </ul>
+    <p><strong>Differences between Android and iOS</strong>:</p>
+    <ul>
+      <li><strong>Android</strong>: Ads based on the user's interests (personalized ads) may be shown. You can opt out of personalized ads as described in Section 7.</li>
+      <li><strong>iOS</strong>: Only non-personalized ads are shown. The App does not track users across other companies' apps or websites.</li>
+    </ul>
+    <p>The types of data actually collected vary depending on the user's settings, region, consent status, and other factors. For details on how AdMob handles data and how to opt out of personalized advertising, please refer to the following Google documentation:</p>
+    <ul>
+      <li>Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+      <li>Google Ad Settings (managing personalized ads): <a href="https://adssettings.google.com/">https://adssettings.google.com/</a></li>
+      <li>AdMob data disclosure: <a href="https://support.google.com/admob/answer/6128543">https://support.google.com/admob/answer/6128543</a></li>
+    </ul>
+    <p><strong>Consent for advertising</strong>: In regions where consent is required by law, the App uses Google's User Messaging Platform (UMP) to obtain consent before showing ads, and no ads are loaded until consent is obtained. The user can change their consent at any time from "Ad privacy settings" on the App's settings screen (shown only in regions where changing consent is required).</p>
+
+    <p><strong>(4) In-app purchases (Google Play / App Store)</strong><br>
+    The App's "Ad-free version" (one-time purchase) is purchased through the Google Play billing system on Android and the App Store on iOS. Payment information (such as credit card details) is processed by Google or Apple and is never received by the operator. To check whether a purchase has been made, the App obtains the purchase status from the store and records the result on the device.<br>
+    <strong>Recipient</strong>: Google LLC and its affiliates (Google Play) on Android, and Apple Inc. (App Store) on iOS<br>
+    <strong>Purpose</strong>: Processing purchases, checking purchase status, restoring purchases, and displaying prices<br>
+    <strong>Information sent</strong>: Information about purchases (product, purchase status, etc.)</p>
+    <p>The App may also show the store's rating prompt (Google Play In-App Review / App Store rating). Ratings are processed by each store, and the operator does not receive their content.</p>
+
+    <p><strong>(5) External map apps</strong><br>
+    When showing directions to the car, the App opens the map app chosen by the user (Google Maps / Apple Maps) and passes it the latitude and longitude of the parking location. Handling in the map app is subject to the privacy policy of its provider.</p>
+
+    <p>Other than the above, the App does not use any SDKs that send data externally for analytics or crash reporting, such as Firebase Analytics or Crashlytics. The App also does not use push notifications.</p>
+
+    <h2>5. Data Storage Location and Retention Period</h2>
+    <ul>
+      <li>All of the information described in Section 2 is <strong>stored on the user's device</strong>. The operator does not hold or store this data.</li>
+      <li>Parking records are kept on the device until the user deletes them, deletes the App's data, or uninstalls the App.</li>
+      <li>Photos in records where you have returned to the car are automatically deleted after the configured retention period (90 days by default; 30, 90, 180 or 365 days can be selected). Photos in records marked as favorites are not deleted.</li>
+      <li>The retention period for data collected by each provider through the third-party services in Section 4 is subject to that provider's privacy policy.</li>
+    </ul>
+    <p><strong>Data security</strong>:</p>
+    <ul>
+      <li>User data is stored in the App's private storage area, which cannot be accessed by other apps.</li>
+      <li>On Android, data is excluded from device backup and device-to-device transfer. Please note that data will not be carried over and will be lost when changing devices or uninstalling the App.</li>
+      <li>The App does not apply its own data encryption. Please manage your device appropriately, for example by setting a screen lock.</li>
+    </ul>
+
+    <h2>6. Provision to Third Parties</h2>
+    <p>Because the operator does not obtain the data on the user's device, the operator does not provide it to third parties.</p>
+    <p>Data is sent to third parties only for the map display, reverse geocoding, ad delivery, in-app purchases, store ratings and external map apps described in Section 4. User data is not provided to or sold to third parties for any other purpose.</p>
+
+    <h2>7. User Rights (Data Deletion and Advertising ID Reset)</h2>
+    <ul>
+      <li><strong>Deleting on-device data</strong>: Parking records can be deleted one at a time from the App's history screen. "Delete all data" on the settings screen deletes all records, photos, settings and temporary map data at once (the purchase status of the "Ad-free version" is kept). Uninstalling the App deletes all of the App's data stored on the device. Purchases can be recovered by restoring purchases after reinstalling.</li>
+      <li><strong>Stopping the use of location and camera</strong>: You can revoke the App's location and camera permissions at any time from the device settings (Android: "Settings" &rarr; "Apps" &rarr; this App &rarr; "Permissions" / iOS: "Settings" &rarr; this App). After revoking them, the App can no longer record parking locations or take photos.</li>
+      <li><strong>Resetting / deleting the Advertising ID (Android)</strong>: From the Android "Settings" &rarr; "Google" &rarr; "Ads", the user can reset or delete the advertising ID and opt out of personalized advertising.</li>
+      <li><strong>Changing consent for advertising</strong>: In regions where consent is required, the user can change it from "Ad privacy settings" on the App's settings screen.</li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>The App is intended for general users (assumed to be 13 years of age or older) and is <strong>not directed at children under the age of 13</strong>. The App does not knowingly collect personal information from children.</p>
+
+    <h2>9. Governing Law</h2>
+    <p>This Policy is governed by the laws of Japan.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>The operator may revise this Policy in response to changes in laws or in the service. If any material change is made, it will be announced on the published page of this Policy. The revised Policy takes effect from the time it is posted on the published page.</p>
+    <ul>
+      <li>Last updated: November 5, 2026</li>
+      <li>Related documents: <a href="./terms.html">Terms of Service</a> / <a href="./legal.html">Legal Notice</a></li>
+    </ul>
+
+    <h2>11. Contact</h2>
+    <p>For inquiries regarding this Policy or the handling of data in the App, please contact us at the following:</p>
+    <ul>
+      <li>Contact email address: arrow.code.lab@gmail.com</li>
+    </ul>
+  </section>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    var ja = document.getElementById('lang-ja');
+    var en = document.getElementById('lang-en');
+    var bja = document.getElementById('btn-ja');
+    var ben = document.getElementById('btn-en');
+    if (lang === 'en') {
+      ja.hidden = true; en.hidden = false;
+      bja.classList.remove('active'); ben.classList.add('active');
+      document.documentElement.lang = 'en';
+    } else {
+      en.hidden = true; ja.hidden = false;
+      ben.classList.remove('active'); bja.classList.add('active');
+      document.documentElement.lang = 'ja';
+    }
+  }
+</script>
+</body>
+</html>

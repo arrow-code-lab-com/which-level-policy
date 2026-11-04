@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>利用規約 / Terms of Service - 何階だっけ / Which Level?</title>
+<style>
+  :root { --fg:#1a1a1a; --muted:#555; --accent:#1565c0; --border:#ddd; --bg:#fff; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif; color: var(--fg); background: var(--bg); line-height: 1.8; margin: 0; padding: 0; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 24px 20px 64px; }
+  h1 { font-size: 1.6rem; border-bottom: 3px solid var(--accent); padding-bottom: 8px; }
+  h2 { font-size: 1.2rem; margin-top: 2em; border-left: 5px solid var(--accent); padding-left: 10px; }
+  a { color: var(--accent); word-break: break-all; }
+  .meta { color: var(--muted); font-size: 0.95rem; }
+  .toggle { position: sticky; top: 0; background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--border); z-index: 10; }
+  .toggle button { font: inherit; padding: 6px 18px; margin-right: 8px; border: 1px solid var(--accent); background: var(--bg); color: var(--accent); border-radius: 20px; cursor: pointer; }
+  .toggle button.active { background: var(--accent); color: #fff; }
+  ul { padding-left: 1.4em; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="toggle">
+    <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ============ 日本語版 ============ -->
+  <section id="lang-ja">
+    <h1>利用規約（何階だっけ）</h1>
+    <p class="meta"><strong>制定日: 2026年11月5日 / 最終改定日: 2026年11月5日</strong></p>
+
+    <h2>第 1 条（適用）</h2>
+    <p>本規約は、個人開発者〔運営者: Arrow Code Lab〕（以下「運営者」）が提供するモバイルアプリケーション「何階だっけ」（英語名: Which Level?、以下「本アプリ」）の利用に関する条件を定めるものです。本規約は、Android 版・iOS 版の両方に適用されます。利用者は、本アプリを利用することにより、本規約に同意したものとみなします。</p>
+
+    <h2>第 2 条（本アプリの内容）</h2>
+    <p>本アプリは、自分の車を停めた場所（位置・階・柱番号・写真・メモ）を記録し、方位・距離・地図で車まで案内するためのツールです。位置情報・気圧による階の判定、写真からの文字の読み取り、地名の取得は、端末のセンサーや電波の状況、建物の構造等により誤差が生じることがあり、運営者はその正確性を保証しません。案内に従って移動する際は、周囲の安全と交通ルールを優先してください。</p>
+
+    <h2>第 3 条（データの管理）</h2>
+    <ul>
+      <li>本アプリのデータは利用者の端末内にのみ保存され、運営者は保管していません。データの取り扱いは<a href="./index.html">プライバシーポリシー</a>に定めるとおりです。</li>
+      <li>データはバックアップされません。端末の故障・紛失・機種変更、本アプリのアンインストール等によりデータは失われ、運営者は復元できません。</li>
+      <li>車に戻った後の記録の写真は、設定した保存期間を過ぎると自動で削除されます（お気に入りを除きます）。</li>
+      <li>駐車位置を共有する場合、共有した情報の取り扱いは利用者の責任で行ってください。他人が写り込んだ写真や他人の情報を扱う場合は、法令を遵守してください。</li>
+    </ul>
+
+    <h2>第 4 条（広告なし版）</h2>
+    <ul>
+      <li>本アプリの「広告なし版」は、Android では Google Play、iOS では App Store の課金システムを通じて購入する買い切りの商品です。定期購入（自動更新）ではありません。</li>
+      <li>「広告なし版」を購入すると、広告が表示されなくなり、駐車の履歴を件数の制限なく見られます（無料版では直近の 30 件まで表示します）。</li>
+      <li>料金は、アプリ内の購入欄および各ストアの購入画面に表示されます。</li>
+      <li>機種変更や再インストールの後は、同じ Google アカウントまたは Apple ID で、アプリ内の「購入を復元」から購入を戻せます。Android と iOS の間で購入を引き継ぐことはできません。</li>
+      <li>返金は、Google Play または App Store の返金ポリシーに従います。</li>
+      <li>未成年者が「広告なし版」を購入する場合は、親権者等の法定代理人の同意を得てください。</li>
+    </ul>
+
+    <h2>第 5 条（広告）</h2>
+    <p>本アプリの無料版には広告が表示されます。広告の内容および広告主のサービスについて、運営者は責任を負いません。</p>
+
+    <h2>第 6 条（地図データ）</h2>
+    <p>本アプリの地図には、OpenStreetMap のデータを使用しています（&copy; OpenStreetMap contributors）。地図の内容が実際の状況と異なる場合があります。</p>
+
+    <h2>第 7 条（禁止事項）</h2>
+    <p>利用者は、次の行為をしてはなりません。</p>
+    <ul>
+      <li>法令または公序良俗に違反する行為</li>
+      <li>第三者の権利（著作権、肖像権、プライバシー等）を侵害する行為</li>
+      <li>他人の車や所在を本人の同意なく追跡する目的で本アプリを利用する行為</li>
+      <li>運転中に本アプリを操作する行為</li>
+      <li>本アプリの逆コンパイル、改変、再配布その他運営者の権利を侵害する行為（法令で認められる場合を除きます）</li>
+      <li>本アプリの運営を妨げる行為</li>
+    </ul>
+
+    <h2>第 8 条（知的財産権）</h2>
+    <p>本アプリに関する著作権その他の権利は、運営者または正当な権利者に帰属します。利用者が作成した記録・写真の権利は、利用者または正当な権利者に帰属します。</p>
+
+    <h2>第 9 条（免責）</h2>
+    <ul>
+      <li>運営者は、本アプリに不具合がないこと、および特定の目的に適合することを保証しません。</li>
+      <li>本アプリの提供は、端末、OS、Google Play、App Store、地図の配信その他の第三者のサービスの状況により、中断または制限されることがあります。</li>
+      <li>車が見つからないこと、駐車料金、駐車場での事故・盗難その他の利用者と第三者との間の紛争について、運営者は関与しません。</li>
+    </ul>
+
+    <h2>第 10 条（責任の制限）</h2>
+    <p>運営者は、本アプリの利用により利用者に生じた損害について、運営者の故意または重大な過失による場合を除き、賠償の責任を負う場合であっても、利用者が「広告なし版」の購入のために支払った金額を上限とします。ただし、消費者契約法その他の法令により本条の適用が制限される場合は、その定めに従います。</p>
+
+    <h2>第 11 条（提供の変更・終了）</h2>
+    <p>運営者は、本アプリの内容を変更し、または提供を終了することがあります。提供を終了する場合は、可能な限り事前に、本アプリの掲載ページ等で告知します。</p>
+
+    <h2>第 12 条（提供地域）</h2>
+    <p>本アプリは、欧州経済領域（EEA）、英国およびスイスでは提供していません。</p>
+
+    <h2>第 13 条（本規約の変更）</h2>
+    <p>運営者は、民法の定型約款に関する規定に従い、本規約を変更することがあります。変更する場合は、変更の内容と効力発生日を本ページで事前に告知します。</p>
+
+    <h2>第 14 条（準拠法）</h2>
+    <p>本規約は、日本法に準拠します。</p>
+
+    <h2>第 15 条（お問い合わせ）</h2>
+    <p>本規約に関するお問い合わせは、arrow.code.lab@gmail.com までご連絡ください。</p>
+
+    <p><a href="./index.html">プライバシーポリシー</a> / <a href="./legal.html">特定商取引法に基づく表記</a></p>
+  </section>
+
+  <!-- ============ English version ============ -->
+  <section id="lang-en" hidden>
+    <h1>Terms of Service (Which Level?)</h1>
+    <p class="meta"><strong>Established: November 5, 2026 / Last updated: November 5, 2026</strong></p>
+
+    <h2>Article 1 (Application)</h2>
+    <p>These Terms set out the conditions for using the mobile application "Which Level?" (Japanese name: 何階だっけ, the "App"), provided by an Individual Developer [operator: Arrow Code Lab] (the "Operator"). These Terms apply to both the Android and iOS versions. By using the App, the user is deemed to have agreed to these Terms.</p>
+
+    <h2>Article 2 (Nature of the App)</h2>
+    <p>The App is a tool for recording where you parked your car (location, level, pillar number, photos and notes) and guiding you back to it with direction, distance and a map. Location, level detection based on air pressure, text recognition from photos, and place names may contain errors depending on the device's sensors, signal conditions, building structure and other factors, and the Operator does not guarantee their accuracy. When following the guidance, always give priority to your surroundings and traffic rules.</p>
+
+    <h2>Article 3 (Data Management)</h2>
+    <ul>
+      <li>The App's data is stored only on the user's device, and the Operator does not store it. Data is handled as described in the <a href="./index.html">Privacy Policy</a>.</li>
+      <li>Data is not backed up. Data will be lost if the device fails, is lost, or is replaced, or if the App is uninstalled, and the Operator cannot restore it.</li>
+      <li>Photos in records where you have returned to the car are automatically deleted after the configured retention period (except favorites).</li>
+      <li>When sharing a parking location, the user is responsible for the handling of the shared information. When handling photos that show other people or information about other people, please comply with applicable laws.</li>
+    </ul>
+
+    <h2>Article 4 (Ad-free Version)</h2>
+    <ul>
+      <li>The App's "Ad-free version" is a one-time purchase made through the Google Play billing system on Android and the App Store on iOS. It is not a subscription (it does not renew automatically).</li>
+      <li>Purchasing the "Ad-free version" removes ads and lets you view your parking history without a limit on the number of records (the free version shows the 30 most recent records).</li>
+      <li>The price is shown in the App's purchase section and on each store's purchase screen.</li>
+      <li>After changing devices or reinstalling, you can recover your purchase with "Restore purchase" in the App, using the same Google account or Apple ID. Purchases cannot be transferred between Android and iOS.</li>
+      <li>Refunds are subject to the refund policy of Google Play or the App Store.</li>
+      <li>If a minor purchases the "Ad-free version", the consent of a legal guardian such as a parent must be obtained.</li>
+    </ul>
+
+    <h2>Article 5 (Advertising)</h2>
+    <p>Ads are displayed in the free version of the App. The Operator is not responsible for the content of ads or for the services of advertisers.</p>
+
+    <h2>Article 6 (Map Data)</h2>
+    <p>The App's map uses OpenStreetMap data (&copy; OpenStreetMap contributors). The map may differ from actual conditions.</p>
+
+    <h2>Article 7 (Prohibited Acts)</h2>
+    <p>The user must not engage in any of the following:</p>
+    <ul>
+      <li>Acts that violate laws or public order and morals</li>
+      <li>Acts that infringe the rights of third parties (copyright, portrait rights, privacy, etc.)</li>
+      <li>Using the App to track another person's car or whereabouts without their consent</li>
+      <li>Operating the App while driving</li>
+      <li>Decompiling, modifying, or redistributing the App, or any other act that infringes the Operator's rights (except where permitted by law)</li>
+      <li>Acts that interfere with the operation of the App</li>
+    </ul>
+
+    <h2>Article 8 (Intellectual Property Rights)</h2>
+    <p>Copyright and other rights relating to the App belong to the Operator or the legitimate rights holders. Rights to records and photos created by the user belong to the user or the legitimate rights holders.</p>
+
+    <h2>Article 9 (Disclaimer)</h2>
+    <ul>
+      <li>The Operator does not guarantee that the App is free of defects or fit for any particular purpose.</li>
+      <li>Provision of the App may be interrupted or restricted depending on the status of the device, the OS, Google Play, the App Store, map delivery, or other third-party services.</li>
+      <li>The Operator is not involved in any dispute between the user and a third party, including failure to find the car, parking fees, or accidents or theft at a parking facility.</li>
+    </ul>
+
+    <h2>Article 10 (Limitation of Liability)</h2>
+    <p>Except in cases of intent or gross negligence on the part of the Operator, even where the Operator is liable for damages incurred by the user through use of the App, the Operator's liability is limited to the amount paid by the user to purchase the "Ad-free version". However, where the application of this Article is limited by the Consumer Contract Act of Japan or other laws, those provisions shall prevail.</p>
+
+    <h2>Article 11 (Changes to and Termination of the App)</h2>
+    <p>The Operator may change the content of the App or stop providing it. If the Operator stops providing the App, it will announce this in advance on the App's store listing or elsewhere, wherever possible.</p>
+
+    <h2>Article 12 (Service Regions)</h2>
+    <p>The App is not offered in the European Economic Area (EEA), the United Kingdom, or Switzerland.</p>
+
+    <h2>Article 13 (Changes to These Terms)</h2>
+    <p>The Operator may change these Terms in accordance with the provisions of the Civil Code of Japan on standard terms and conditions. In that case, the Operator will announce the changes and their effective date on this page in advance.</p>
+
+    <h2>Article 14 (Governing Law)</h2>
+    <p>These Terms are governed by the laws of Japan.</p>
+
+    <h2>Article 15 (Contact)</h2>
+    <p>For inquiries regarding these Terms, please contact arrow.code.lab@gmail.com.</p>
+
+    <p><a href="./index.html">Privacy Policy</a> / <a href="./legal.html">Legal Notice</a></p>
+  </section>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    var ja = document.getElementById('lang-ja');
+    var en = document.getElementById('lang-en');
+    var bja = document.getElementById('btn-ja');
+    var ben = document.getElementById('btn-en');
+    if (lang === 'en') {
+      ja.hidden = true; en.hidden = false;
+      bja.classList.remove('active'); ben.classList.add('active');
+      document.documentElement.lang = 'en';
+    } else {
+      en.hidden = true; ja.hidden = false;
+      ben.classList.remove('active'); bja.classList.add('active');
+      document.documentElement.lang = 'ja';
+    }
+  }
+</script>
+</body>
+</html>
