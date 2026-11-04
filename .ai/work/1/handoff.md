@@ -34,7 +34,7 @@ artifacts:
     - index.html
     - terms.html
     - legal.html
-events: 42
+events: 44
 ---
 
 # Issue #1 の索引
@@ -43,12 +43,11 @@ events: 42
 
 - 現在地: `pr-success`（outcome: ready）
 - フロー: `ai-default-medium` / 通過: `triage` → `requirements` → `impl` → `review` → `pr`
-- open な指摘: 2 件（Major 以上 0 件）
+- open な指摘: 1 件（Major 以上 0 件）
 
 ## open な指摘
 
 - Minor `.ai/work/1/events` この Issue に kind: decision / concern の event が 0 件 … `events/20261104T160029-review.yaml`
-- Minor `terms.html:88` 責任の上限が「広告なし版の支払額」なので、無料の利用者には全部免責になり消費者契約法 8 条 1 項で無効になり得る … `events/20261104T160208-review.yaml`
 
 ## 成果物
 
@@ -73,3 +72,4 @@ events: 42
 ## 記録（判断・懸念・検証・環境・質問）
 
 - env [review] 事実確認用の which-level の作業ツリー（workspaces/which-level/画面修正）がレビュー途中で消えた … `events/20261104T160214-review.yaml`
+- decision [impl] 無料の利用者の賠償の上限は「広告なし版」の販売価格の2分の1（ユーザー回答） … `events/20261104T161333-impl.yaml`

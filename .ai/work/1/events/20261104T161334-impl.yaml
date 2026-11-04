@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261104T160208-review.yaml
+summary: terms.html 第10条に無料の利用者の上限（広告なし版の価格の2分の1）を追記
