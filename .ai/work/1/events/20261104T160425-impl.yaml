@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261104T160207-review.yaml
+summary: 利用規約・ポリシーとも「設定画面の『購入を復元』」に統一

@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: wontfix
+ref: 20261104T160210-review.yaml
+summary: FR-2（参考元と同じ単体HTML）に従う重複。変更しない

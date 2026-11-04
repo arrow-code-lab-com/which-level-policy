@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: wontfix
+ref: 20261104T160209-review.yaml
+summary: TARGETED_DEVICE_FAMILY=1,2 で iPad 対応を確認済み。変更不要

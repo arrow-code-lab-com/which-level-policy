@@ -1,0 +1,8 @@
+node: impl
+kind: run
+status: success
+outcome: 実装完了
+to: review
+sha: 571f992
+model: claude-opus-5-5
+summary: Major 3件と Minor 4件を修正。責任上限（無料利用者）と decision event 0件の Minor は open のまま

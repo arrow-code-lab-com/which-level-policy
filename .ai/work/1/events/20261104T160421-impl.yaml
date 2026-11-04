@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Major
+state: done
+ref: 20261104T160013-review.yaml
+summary: 確認ページからローカルの絶対パスを除去

@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Major
+state: done
+ref: 20261104T160006-review.yaml
+summary: index.html 第4章に (6) 文字認識（Google ML Kit）の送信を追加し、第6章の列挙も更新

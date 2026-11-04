@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261104T160027-review.yaml
+summary: 設定名を「保存後すぐカメラを開くか」に修正

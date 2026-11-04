@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: wontfix
+ref: 20261104T160205-review.yaml
+summary: ソースで正しいと確認済み。変更不要

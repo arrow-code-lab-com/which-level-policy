@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Major
+state: done
+ref: 20261104T155952-review.yaml
+summary: index.html 第5章・第7章と terms.html 第3条で Android と iOS のバックアップの扱いを分けて記載

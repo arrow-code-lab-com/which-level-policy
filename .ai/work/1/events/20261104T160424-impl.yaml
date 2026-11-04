@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261104T160204-review.yaml
+summary: Android の広告 ID を「利用される場合があります」に修正

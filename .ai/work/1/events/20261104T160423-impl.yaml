@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261104T160028-review.yaml
+summary: 第3章に Android で SDK が権限を追加する旨を追記

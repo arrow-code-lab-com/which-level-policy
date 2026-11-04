@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: wontfix
+ref: 20261104T160206-review.yaml
+summary: 参考元と同じ挙動。spec の範囲外
