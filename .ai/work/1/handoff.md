@@ -2,8 +2,8 @@
 issue: 1
 pr: 2
 flow: ai-default-medium
-status: review-success
-outcome: clean
+status: pr-running
+outcome: null
 evidence:
   spec_status: draft
   has_issue: true
@@ -33,14 +33,14 @@ artifacts:
     - index.html
     - terms.html
     - legal.html
-events: 40
+events: 41
 ---
 
 # Issue #1 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `review-success`（outcome: clean）
+- 現在地: `pr-running`
 - フロー: `ai-default-medium` / 通過: `triage` → `requirements` → `impl` → `review`
 - open な指摘: 2 件（Major 以上 0 件）
 
