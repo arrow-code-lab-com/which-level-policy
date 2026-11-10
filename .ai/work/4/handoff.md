@@ -1,8 +1,8 @@
 ---
 issue: 4
 flow: ai-default-medium
-status: impl-running
-outcome: null
+status: impl-success
+outcome: "実装完了"
 evidence:
   spec_status: none
   has_issue: true
@@ -10,28 +10,24 @@ evidence:
   tasks_total: 0
   tasks_done: 0
   integration: none
-  open_major: 1
+  open_major: 0
   merged: false
   accepted: false
 passed: [impl]
 attempts: { impl: 2, review: 1 }
 edges:
-  impl->review: 2
+  impl->review: 3
   review->impl: 2
-events: 31
+events: 33
 ---
 
 # Issue #4 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `impl-running`
+- 現在地: `impl-success`（outcome: 実装完了）
 - フロー: `ai-default-medium` / 通過: `impl`
-- open な指摘: 1 件（Major 以上 1 件）
-
-## open な指摘
-
-- Major `.ai/work/4/events` 受入条件「Google Maps についての記述がポリシーと利用規約に入っている」に kind: verification の event が無い … `events/20261110T110115-review.yaml`
+- open な指摘: 0 件（Major 以上 0 件）
 
 ## 直近の経路
 
@@ -39,6 +35,7 @@ events: 31
 - review ↩ impl（Major 2 件: iOS にはアプリ単体のキャッシュ消去が無いのにそれで消せると書いている／受入条件の verification の記録が無い）
 - impl → review
 - review ↩ impl（Major 20261110T110115（verification 無し）の done が積まれておらず open のまま）
+- impl → review
 
 ## 記録（判断・懸念・検証・環境・質問）
 

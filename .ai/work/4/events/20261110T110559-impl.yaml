@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Major
+state: done
+ref: 20261110T110115-review.yaml
+summary: verification を 20261110T110416-impl.yaml に積んだ（根拠資料 §1・§2・§4 と index.html / terms.html の日英を突き合わせ）

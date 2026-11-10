@@ -1,0 +1,8 @@
+node: impl
+kind: run
+status: success
+outcome: 実装完了
+to: review
+sha: bbbabae
+model: claude-opus-5-5
+summary: verification 不足の Major を閉じた（コードの変更なし）
