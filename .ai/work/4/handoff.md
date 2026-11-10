@@ -1,8 +1,8 @@
 ---
 issue: 4
 flow: ai-default-medium
-status: review-success
-outcome: clean
+status: pr-running
+outcome: null
 evidence:
   spec_status: none
   has_issue: true
@@ -19,14 +19,14 @@ edges:
   impl->review: 3
   review->impl: 2
   review->pr: 1
-events: 35
+events: 36
 ---
 
 # Issue #4 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `review-success`（outcome: clean）
+- 現在地: `pr-running`
 - フロー: `ai-default-medium` / 通過: `impl` → `review`
 - open な指摘: 0 件（Major 以上 0 件）
 
