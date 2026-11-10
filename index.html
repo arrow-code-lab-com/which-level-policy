@@ -67,16 +67,16 @@
     </ul>
     <p>このほか、車の方向を示すために端末の方位センサー（コンパス）を使用します。この利用に権限は必要なく、センサーの値は案内の表示にのみ使い、保存・送信しません。</p>
     <p>写真は本アプリ専用の保存領域に保存するため、本アプリは写真ライブラリ・ストレージへのアクセス権限を使用しません。また、マイク・連絡先の権限も使用しません。</p>
-    <p>Android では、第 4 章の広告・課金の SDK が、その機能に必要な権限（広告 ID の利用、課金、ネットワーク状態の確認等）を追加することがあります。</p>
+    <p>Android では、第 4 章の地図・広告・課金の SDK が、その機能に必要な権限（広告 ID の利用、課金、ネットワーク状態の確認等）を追加することがあります。</p>
 
     <h2>4. 第三者サービス（地図・住所変換・広告・課金）</h2>
     <p>本アプリは、以下の第三者サービスを利用しています。これらのサービスへの送信は、各サービスの提供者のプライバシーポリシーに従って取り扱われます。</p>
 
     <p><strong>(1) 地図の表示（Google Maps）</strong><br>
-    本アプリは、地図の表示に Google が提供する <strong>Google Maps SDK</strong>（Android 版・iOS 版）を利用しています。地図を表示するたびに、以下の情報が Google に送信されます。駐車位置のメモや写真を Google に送信することはありませんが、表示する地図の範囲は駐車位置の近くになるため、<strong>位置に関する情報が地図の表示のために Google に送信されます</strong>。<br>
+    本アプリは、地図の表示に Google が提供する <strong>Google Maps SDK</strong>（Android 版・iOS 版）を利用しています。地図を表示するとき、以下の情報が Google に送信されます。駐車位置のメモや写真を Google に送信することはありませんが、表示する地図の範囲は駐車位置の近くになるため、<strong>位置に関する情報が地図の表示のために Google に送信されます</strong>。<br>
     <strong>送信先</strong>: Google LLC<br>
     <strong>利用目的</strong>: 駐車位置の周りの地図の表示<br>
-    <strong>送信される情報</strong>: 表示する地図の範囲（駐車位置や現在地の周辺を示します）、端末とアプリの情報（OS・端末の種類・アプリの識別子など、SDK が通信に付ける情報）、本アプリに組み込んだ API キー<br>
+    <strong>送信される情報</strong>: 表示する地図の範囲（駐車位置や現在地の周辺を示します）、IP アドレス、端末とアプリの情報（OS・端末の種類・アプリの識別子など、SDK が通信に付ける情報）、本アプリに組み込んだ API キー<br>
     詳細: Google プライバシーポリシー <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 
     <p><strong>(2) 住所変換（逆ジオコーディング）</strong><br>
@@ -134,7 +134,7 @@
       <li>第 2 章に記載した情報は、<strong>すべて利用者の端末内に保存</strong>されます。運営者はこれらのデータを保有・保管しません。</li>
       <li>駐車の記録は、利用者が削除するか、本アプリのデータを削除するか、本アプリをアンインストールするまで端末内に保持されます。</li>
       <li>車に戻った後の記録の写真は、設定した保存期間（初期設定は 90 日。30 日・90 日・180 日・365 日から選べます）を過ぎると自動で削除します。お気に入りに登録した記録の写真は削除しません。</li>
-      <li>地図のキャッシュは、Google Maps SDK が端末内に保存・管理します。本アプリからは削除できないため、設定画面の「すべてのデータを削除」では削除されません。本アプリをアンインストールするか、端末の設定から本アプリのキャッシュを消去すると削除されます。</li>
+      <li>地図のキャッシュは、Google Maps SDK が端末内に保存・管理します。設定画面の「すべてのデータを削除」の対象外で、これを使っても削除されません。本アプリをアンインストールすると削除されます。このほか、<strong>Android</strong> では端末の「設定」&rarr;「アプリ」&rarr; 本アプリ &rarr;「ストレージ」から本アプリのキャッシュを消去しても削除できます。<strong>iOS</strong> には本アプリのキャッシュだけを消去する設定が無いため、削除するには本アプリをアンインストールしてください。</li>
       <li>第 4 章の第三者サービスを通じて各提供者が収集するデータの保持期間は、各提供者のプライバシーポリシーに従います。</li>
     </ul>
     <p><strong>データの安全管理</strong>:</p>
@@ -216,16 +216,16 @@
     </ul>
     <p>In addition, the App uses the device's compass to show the direction of the car. No permission is required for this, and the sensor values are used only for the guidance display and are neither stored nor transmitted.</p>
     <p>Because photos are saved in the App's private storage area, the App does not use permissions to access the photo library or storage. It also does not use the microphone or contacts permissions.</p>
-    <p>On Android, the advertising and billing SDKs described in Section 4 may add permissions needed for their functions (such as use of the Advertising ID, billing, and checking the network state).</p>
+    <p>On Android, the map, advertising and billing SDKs described in Section 4 may add permissions needed for their functions (such as use of the Advertising ID, billing, and checking the network state).</p>
 
     <h2>4. Third-Party Services (Maps, Reverse Geocoding, Advertising and Billing)</h2>
     <p>The App uses the following third-party services. Data sent to these services is handled in accordance with the privacy policy of each provider.</p>
 
     <p><strong>(1) Map display (Google Maps)</strong><br>
-    The App uses the <strong>Google Maps SDK</strong> (for Android and iOS), provided by Google, to display maps. Each time a map is displayed, the following information is sent to Google. The App does not send parking notes or photos to Google, but because the displayed map area is near the parking location, <strong>information related to your location is sent to Google in order to display the map</strong>.<br>
+    The App uses the <strong>Google Maps SDK</strong> (for Android and iOS), provided by Google, to display maps. When a map is displayed, the following information is sent to Google. The App does not send parking notes or photos to Google, but because the displayed map area is near the parking location, <strong>information related to your location is sent to Google in order to display the map</strong>.<br>
     <strong>Recipient</strong>: Google LLC<br>
     <strong>Purpose</strong>: Displaying the map around the parking location<br>
-    <strong>Information sent</strong>: The map area to be displayed (which indicates the area around the parking location or current location), device and app information (such as the OS, device type and app identifier that the SDK attaches to its communications), and the API key built into the App<br>
+    <strong>Information sent</strong>: The map area to be displayed (which indicates the area around the parking location or current location), IP address, device and app information (such as the OS, device type and app identifier that the SDK attaches to its communications), and the API key built into the App<br>
     Details: Google Privacy Policy <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 
     <p><strong>(2) Reverse geocoding</strong><br>
@@ -283,7 +283,7 @@
       <li>All of the information described in Section 2 is <strong>stored on the user's device</strong>. The operator does not hold or store this data.</li>
       <li>Parking records are kept on the device until the user deletes them, deletes the App's data, or uninstalls the App.</li>
       <li>Photos in records where you have returned to the car are automatically deleted after the configured retention period (90 days by default; 30, 90, 180 or 365 days can be selected). Photos in records marked as favorites are not deleted.</li>
-      <li>The map cache is stored and managed on the device by the Google Maps SDK. Because the App cannot delete it, it is not deleted by "Delete all data" on the settings screen. It is deleted when the App is uninstalled or when the App's cache is cleared from the device settings.</li>
+      <li>The map cache is stored and managed on the device by the Google Maps SDK. It is not covered by "Delete all data" on the settings screen and is not deleted by it. It is deleted when the App is uninstalled. In addition, on <strong>Android</strong> it can be deleted by clearing the App's cache from the device "Settings" &rarr; "Apps" &rarr; this App &rarr; "Storage". <strong>iOS</strong> has no setting to clear only the App's cache, so to delete it, uninstall the App.</li>
       <li>The retention period for data collected by each provider through the third-party services in Section 4 is subject to that provider's privacy policy.</li>
     </ul>
     <p><strong>Data security</strong>:</p>
