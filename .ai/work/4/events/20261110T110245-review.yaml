@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:76
+fix: "「地図を表示するとき、以下の情報が Google に送信されます」（英: \"When a map is displayed, …\"）のように「たびに」を外す。"
+state: open
+summary: 「地図を表示するたびに…送信されます」が、同じ文書の地図のキャッシュの記述と食い違う
+body: "'地図を表示するたびに…Google に送信されます' / 'Each time a map is displayed' contradicts the new map-cache disclosure, which says the SDK reuses cached map data. / 故障シナリオ: When the user reopens a map area that is already cached, the SDK may serve it from cache without sending that area again. 'Every time' is therefore inaccurate and conflicts with sections 2 and 5 in the same document. The same text in EN is at line 225.（出典: /code-review）"

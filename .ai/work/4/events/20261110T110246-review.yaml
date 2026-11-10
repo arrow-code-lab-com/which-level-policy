@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:137
+fix: 文言は根拠資料 docs/privacy/google-maps.md §4 どおりなので、このままでよいかは which-level#28 の実装（全データ消去の処理）を見て判断する。実装がキャッシュを消さないなら「本アプリからは削除できない」を「本アプリの「すべてのデータを削除」の対象外です」に弱めるのが安全。
+state: open
+summary: 「本アプリからは削除できない」がアプリの実際の動作（全データ消去がキャッシュのディレクトリを消すか）と一致しているか未確認
+body: "The claim that 'Delete all data' no longer clears the map cache, and that the App 'cannot delete it', reverses the earlier statement. It is not tied to any change in app behavior, and the App can in fact wipe its own cache directories. / 故障シナリオ: The SDK keeps its tile cache in the App's sandbox (Caches / cache dir), so the App could delete it. If the app's existing 'Delete all data' still clears the cache directory (it previously promised to clear map data), the policy now understates what is deleted. If it does not, the 'cannot delete' wording is a product choice described as a technical limit. Either way, sections 5 and 7 may not match what the app actually does.（出典: /code-review）"

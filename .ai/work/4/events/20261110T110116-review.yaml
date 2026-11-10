@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:79
+fix: "日英とも「送信される情報」に「IP アドレス」（英: IP address）を足す。例: 「表示する地図の範囲（…）、IP アドレス、端末とアプリの情報（…）、本アプリに組み込んだ API キー」。"
+state: open
+summary: 地図（Google Maps）で送られる情報から IP アドレスが消えた（旧 OpenStreetMap の節には書いていた）
+body: 第 4 章 (1) の「送信される情報」は、OpenStreetMap のときは「表示する地図の範囲、IP アドレス、本アプリの識別名」だったが、Google Maps への書き換えで「表示する地図の範囲、端末とアプリの情報（OS・端末の種類・アプリの識別子など…）、API キー」となり、IP アドレスが無くなった（英語版 index.html:228 も同じ）。Google のサーバーと通信する以上 IP アドレスは必ず Google に届くので、書かないと送られないように読める。根拠資料 docs/privacy/google-maps.md §1 の 3 項目どおりではあるが、資料は「など」付きの要約で、旧記述より情報が減る方向の変更になっている。Google Play のデータセーフティ（Maps SDK のデータ開示）と揃える作業（which-level#13）で食い違いの元になり得る。

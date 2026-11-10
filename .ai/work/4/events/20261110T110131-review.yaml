@@ -1,0 +1,14 @@
+node: review
+kind: checkpoint
+sha: e5a93fd41ac0a80cafd9c1d305a757896d959698
+summary: 観点レビュー完了（指摘 3 件）
+phase: rules
+detail: |
+  quality: 指摘 1 件（Major: iOS では端末の設定からキャッシュを消せない／Minor: IP アドレスの記載が消えた）※文書の正確さとして評価
+  refactoring: 該当なし（日英の両版を同じ内容で直しており、旧 OSM・地図タイル・一時データの記述の残りも無いことを grep で確認）
+  security: 該当なし（静的 HTML の文言変更のみ。API キーの値などの機密は含まない）
+  performance: 該当なし（静的 HTML の文言変更のみ）
+  test: 該当なし（リポジトリにテストの仕組みが無い静的 HTML。impl の env に記録あり）
+  conventions: 該当なし（既存の第 4 章の書式（送信先・利用目的・送信される情報・詳細）と日英併記に沿っている）
+  error-handling: 該当なし（コードの変更なし）
+  計画整合: verification の無い受入条件 1 件（Major）。plan・task なしのため許可集合・スコープは判定不能。dirty・退避 ref・絶対パスの混入なし

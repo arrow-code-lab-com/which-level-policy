@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:70
+fix: 日英とも「第 4 章の地図・広告・課金の SDK が…」と地図を足す。足す前に which-level の Android のマージ後マニフェストで Maps SDK 由来の権限を確かめる。
+state: open
+summary: Android の権限の注記が「広告・課金の SDK」だけで、新たに入った Google Maps SDK が足す権限に触れていない
+body: "The permissions note still says only the advertising and billing SDKs may add Android permissions, but the newly added Google Maps SDK also adds permissions to the merged manifest (for example ACCESS_NETWORK_STATE, and Play services-related ones). / 故障シナリオ: The Android manifest now includes permissions contributed by the Maps SDK. The policy's explanation of where extra permissions come from leaves the map SDK out, so the permission disclosure is incomplete. The same text in EN is at line 219.（出典: /code-review）"

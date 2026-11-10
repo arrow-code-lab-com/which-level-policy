@@ -1,0 +1,8 @@
+node: review
+kind: run
+status: revert
+outcome: findings
+revert_to: impl
+reason: "Major 2 件: iOS にはアプリ単体のキャッシュ消去が無いのにそれで消せると書いている／受入条件の verification の記録が無い"
+model: claude-opus-5-5
+summary: Google Maps 移行の反映を確認し、Major 2 件と Minor 5 件が見つかったので impl に戻す

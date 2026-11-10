@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Major
+at: .ai/work/4/events
+fix: "impl で上の Major（iOS のキャッシュ消去）を直したあと、根拠資料の §1・§2・§4 の各項目が index.html / terms.html の日英どちらに入っているかを突き合わせ、kind: verification の event を 1 枚積む（公開 URL・サポート窓口は人の作業で未完であることも併記する）。"
+state: open
+summary: "受入条件「Google Maps についての記述がポリシーと利用規約に入っている」に kind: verification の event が無い"
+body: "Issue #4 の終わりの条件のうちこの差分が担う「Google Maps についての記述がポリシーと利用規約に入っている」について、impl ノードの events は env（タグの入れ子を検査した）と concern だけで、根拠資料 docs/privacy/google-maps.md（§1 送られる 3 項目・§2 利用規約とポリシーに求められる記述・§4 キャッシュ）と突き合わせた検証の記録が無い。review の計画整合の表 #3（verification の無い受入条件）に当たる。なお、もう一方の条件（公開 URL・サポート窓口）は人の作業で concern に記録済みのため対象外。"

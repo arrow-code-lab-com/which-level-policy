@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: index.html:35
+fix: "ポリシーがまだ公開前（公開 URL は人の作業で未用意）なら初版のままでよく、施行日を公開日に揃えるのが簡単。公開後の改定として扱うなら、施行日を改定日にして第 10 章に改定履歴（2026年11月10日: 地図の提供元を Google Maps に変更）を足す。どちらにするかは人が決める。"
+state: open
+summary: "冒頭の「施行日: 2026年11月5日（初版）」のままで、改定版の施行日と改定の告知が無い"
+body: "The meta line still says '施行日: 2026年11月5日（初版）' / 'Effective date: November 5, 2026 (initial version)' while the content has been materially revised (new recipient, Google LLC instead of OSM), and no effective date is given for the revision. / 故障シナリオ: Section 10 says revisions take effect when posted and that material changes will be announced. The header, however, presents the revised text as the initial version effective Nov 5. Users cannot tell when the Google Maps data transfer started being covered, and no announcement of the change appears on the page. EN equivalent at line 184.（出典: /code-review）"
