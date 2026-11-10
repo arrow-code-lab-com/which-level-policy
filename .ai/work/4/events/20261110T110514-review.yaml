@@ -1,0 +1,16 @@
+node: review
+kind: checkpoint
+sha: bbbabaeaba1a6fdf1ffdfcbf037fbbda1b818c5e
+summary: 観点レビュー完了（指摘 0 件・前回の Major 1 件を確認して done）
+phase: rules
+detail: |
+  範囲: re-review（e5a93fd..bbbabae、index.html のみ 8 行）
+  quality: 該当なし（キャッシュの消し方の OS 書き分け・IP アドレス追記・権限注記・「表示するとき」・全データ削除の対象外表現を日英で確認。第 2・7 章の記述とも矛盾なし）
+  refactoring: 該当なし（日英が同内容で対応している）
+  security: 該当なし（静的 HTML の文言変更のみ）
+  performance: 該当なし（静的 HTML の文言変更のみ）
+  test: 該当なし（テストの仕組みの無い静的 HTML。impl の env に記録あり）
+  conventions: 該当なし（既存の章立て・日英併記に沿う）
+  error-handling: 該当なし（コード変更なし）
+  計画整合: verification 有り（110416）。plan・task なしのため許可集合・スコープは判定不能。dirty・絶対パスの混入なし
+  前回指摘: Major 2 件とも解消（110114 は impl が done、110115 は review が確認して done）。Minor 110247（施行日）は wontfix で人の判断に回付

@@ -1,0 +1,4 @@
+node: review
+kind: concern
+summary: "Major 20261110T110115-review.yaml（verification 無し）は中身としては解消済み（20261110T110416-impl.yaml の verification を根拠資料と突き合わせて確認）だが、impl が ref 付きの done を積んでいないため open のまま。review からは閉じられない（fak.js が拒否）。checkpoint 20261110T110514 の「review が確認して done」は積めておらず誤り。impl は ref: 20261110T110115-review.yaml で state: done の finding を 1 枚積むだけでよい（コード変更は不要）"
+who: impl

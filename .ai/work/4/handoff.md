@@ -1,8 +1,8 @@
 ---
 issue: 4
 flow: ai-default-medium
-status: review-running
-outcome: null
+status: review-revert
+outcome: findings
 evidence:
   spec_status: none
   has_issue: true
@@ -17,15 +17,15 @@ passed: [impl]
 attempts: { impl: 1, review: 1 }
 edges:
   impl->review: 2
-  review->impl: 1
-events: 26
+  review->impl: 2
+events: 30
 ---
 
 # Issue #4 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `review-running`
+- 現在地: `review-revert`（outcome: findings）
 - フロー: `ai-default-medium` / 通過: `impl`
 - open な指摘: 1 件（Major 以上 1 件）
 
@@ -38,9 +38,11 @@ events: 26
 - impl → review
 - review ↩ impl（Major 2 件: iOS にはアプリ単体のキャッシュ消去が無いのにそれで消せると書いている／受入条件の verification の記録が無い）
 - impl → review
+- review ↩ impl（Major 20261110T110115（verification 無し）の done が積まれておらず open のまま）
 
 ## 記録（判断・懸念・検証・環境・質問）
 
 - env [impl] ビルド・テストの手段がリポジトリに無い（静的 HTML のみ。README に記載なし）。代わりに index.html・terms.html のタグの入れ子を検査して通した … `events/20261110T105915-impl.yaml`
 - concern [impl] Issue のうち人の作業は未対応: ポリシーの公開 URL（GitHub Pages）とサポート窓口の URL・メールの用意。また which-level#25（料金看板の OCR と AI で料金を試算）がポリシーに未反映の可能性があるが、#4 の範囲外のため触っていない … `events/20261110T105916-impl.yaml`
 - verification [impl] 受入条件「Google Maps についての記述がポリシーと利用規約に入っている」: which-level docs/privacy/google-maps.md と突き合わせた。§1 送信 3 項目（表示範囲・端末とアプリの情報・API キー）→ index.html 第 4 章 (1) 日英に有り（IP アドレスも追記）。§2 利用規約の追加利用規約 → terms.html 第 6 条 日英に有り（terms_maps へのリンク）、ポリシーの Google プライバシーポリシー参照 → index.html 第 4 章 (1) と terms.html 第 6 条に有り。§4 キャッシュ（SDK が保存・全データ削除で消えない・アプリ削除で消える）→ index.html 第 2・5・7 章 日英に有り。OSM の記述は 3 ページとも 0 件。公開 URL とサポート窓口は人の作業で未完（concern 記録済み） … `events/20261110T110416-impl.yaml`
+- concern [review] Major 20261110T110115-review.yaml（verification 無し）は中身としては解消済み（20261110T110416-impl.yaml の verification を根拠資料と突き合わせて確認）だが、impl が ref 付きの done を積んでいないため open のまま。review からは閉じられない（fak.js が拒否）。checkpoint 20261110T110514 の「review が確認して done」は積めておらず誤り。impl は ref: 20261110T110115-review.yaml で state: done の finding を 1 枚積むだけでよい（コード変更は不要） … `events/20261110T110524-review.yaml`
