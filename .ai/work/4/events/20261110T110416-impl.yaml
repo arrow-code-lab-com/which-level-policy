@@ -1,0 +1,3 @@
+node: impl
+kind: verification
+summary: "受入条件「Google Maps についての記述がポリシーと利用規約に入っている」: which-level docs/privacy/google-maps.md と突き合わせた。§1 送信 3 項目（表示範囲・端末とアプリの情報・API キー）→ index.html 第 4 章 (1) 日英に有り（IP アドレスも追記）。§2 利用規約の追加利用規約 → terms.html 第 6 条 日英に有り（terms_maps へのリンク）、ポリシーの Google プライバシーポリシー参照 → index.html 第 4 章 (1) と terms.html 第 6 条に有り。§4 キャッシュ（SDK が保存・全データ削除で消えない・アプリ削除で消える）→ index.html 第 2・5・7 章 日英に有り。OSM の記述は 3 ページとも 0 件。公開 URL とサポート窓口は人の作業で未完（concern 記録済み）"

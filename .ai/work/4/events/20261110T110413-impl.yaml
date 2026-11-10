@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261110T110245-review.yaml
+summary: 「表示するたびに」を「表示するとき」に直した（日英）

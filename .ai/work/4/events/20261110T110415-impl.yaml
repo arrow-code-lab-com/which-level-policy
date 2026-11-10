@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: wontfix
+ref: 20261110T110247-review.yaml
+summary: 施行日（初版扱いか改定扱いか）は人が決める事項のため触らない。ポリシーは未公開なので初版のままでも食い違いは無い。PR 本文で判断を仰ぐ

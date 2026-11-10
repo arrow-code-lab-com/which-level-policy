@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261110T110244-review.yaml
+summary: Android の権限の注記に地図の SDK を足した（日英）

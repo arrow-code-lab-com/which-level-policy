@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Major
+state: done
+ref: 20261110T110114-review.yaml
+summary: 第 5 章のキャッシュの消し方を OS で書き分けた（Android は設定→アプリ→ストレージで消去可、iOS はアンインストールのみ）。日英とも

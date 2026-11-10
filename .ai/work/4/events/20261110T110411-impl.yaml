@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261110T110116-review.yaml
+summary: 第 4 章 (1) の送信される情報に IP アドレスを足した（日英）

@@ -1,0 +1,6 @@
+node: impl
+kind: finding
+severity: Minor
+state: done
+ref: 20261110T110246-review.yaml
+summary: which-level origin/main の全データ削除が記録・写真・設定だけを消すことを確かめ、「本アプリからは削除できない」を「すべてのデータを削除の対象外」に弱めた

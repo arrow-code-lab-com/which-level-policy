@@ -1,0 +1,8 @@
+node: impl
+kind: run
+status: success
+outcome: 実装完了
+to: review
+sha: bbbabae
+model: claude-opus-5-5
+summary: レビュー指摘を直した（iOS のキャッシュ消去の誤り・IP アドレス・権限の注記・送信の頻度・全データ削除の表現）。施行日は人の判断に回した
