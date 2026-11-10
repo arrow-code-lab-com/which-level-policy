@@ -1,0 +1,8 @@
+node: impl
+kind: run
+status: success
+outcome: 実装完了
+to: review
+sha: e5a93fd
+model: claude-opus-5-5
+summary: 地図を Google Maps SDK に移したことをプライバシーポリシー（送信先・送信情報・キャッシュの扱い）と利用規約第 6 条（追加利用規約・Google プライバシーポリシーへの参照）に反映した

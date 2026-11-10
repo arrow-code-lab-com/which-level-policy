@@ -1,0 +1,3 @@
+node: impl
+kind: env
+summary: ビルド・テストの手段がリポジトリに無い（静的 HTML のみ。README に記載なし）。代わりに index.html・terms.html のタグの入れ子を検査して通した
