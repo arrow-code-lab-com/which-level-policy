@@ -1,0 +1,8 @@
+node: review
+kind: run
+status: success
+outcome: clean
+to: pr
+sha: bbbabae
+model: claude-opus-5-5
+summary: 前回以降コード変更なし。Major 以上の open は 0 件（施行日の扱いは wontfix で人の判断へ）

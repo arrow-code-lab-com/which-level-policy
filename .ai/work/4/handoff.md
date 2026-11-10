@@ -1,8 +1,8 @@
 ---
 issue: 4
 flow: ai-default-medium
-status: review-running
-outcome: null
+status: review-success
+outcome: clean
 evidence:
   spec_status: none
   has_issue: true
@@ -13,20 +13,21 @@ evidence:
   open_major: 0
   merged: false
   accepted: false
-passed: [impl]
+passed: [impl, review]
 attempts: { impl: 2, review: 2 }
 edges:
   impl->review: 3
   review->impl: 2
-events: 34
+  review->pr: 1
+events: 35
 ---
 
 # Issue #4 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `review-running`
-- フロー: `ai-default-medium` / 通過: `impl`
+- 現在地: `review-success`（outcome: clean）
+- フロー: `ai-default-medium` / 通過: `impl` → `review`
 - open な指摘: 0 件（Major 以上 0 件）
 
 ## 直近の経路
@@ -36,6 +37,7 @@ events: 34
 - impl → review
 - review ↩ impl（Major 20261110T110115（verification 無し）の done が積まれておらず open のまま）
 - impl → review
+- review → pr
 
 ## 記録（判断・懸念・検証・環境・質問）
 
