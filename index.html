@@ -32,7 +32,7 @@
   <!-- ============ 日本語版 ============ -->
   <section id="lang-ja">
     <h1>プライバシーポリシー（何階だっけ）</h1>
-    <p class="meta"><strong>最終改定日: 2026年11月5日 / 施行日: 2026年11月5日（初版）</strong></p>
+    <p class="meta"><strong>最終改定日: 2026年11月10日 / 施行日: 2026年11月5日（初版）</strong></p>
 
     <h2>1. 適用範囲とアプリ情報</h2>
     <p>本プライバシーポリシー（以下「本ポリシー」）は、個人開発者（Individual Developer）〔運営者: Arrow Code Lab〕が提供するモバイルアプリケーション「何階だっけ」（英語名: Which Level?、Android のパッケージ名および iOS のバンドル ID: com.arrowcodelab.whichlevel、以下「本アプリ」）における利用者情報の取り扱いについて定めるものです。</p>
@@ -51,7 +51,7 @@
       <li><strong>記録の状態</strong>: 記録の作成日時、駐車中か、車に戻ったか、戻った時刻。</li>
       <li><strong>アプリの設定・利用状況</strong>: 初期設定の完了、最後に使用した日時と画面、保存後すぐカメラを開くか・振動・使用する地図アプリ・写真の保存期間などの設定、アプリの評価のお願いを表示した日時、起動にかかった時間などの記録。</li>
       <li><strong>購入状態</strong>: 「広告なし版」を購入済みかどうか。</li>
-      <li><strong>地図の一時データ</strong>: 表示した地図の画像（地図タイル）のキャッシュ。</li>
+      <li><strong>地図のキャッシュ</strong>: 第 4 章の Google Maps SDK が、表示した地図のデータを端末内に一時保存したもの。</li>
     </ul>
     <p>本アプリには、アカウント登録・ログインの機能はありません。氏名・メールアドレス・電話番号・連絡先などの情報は取得しません。</p>
     <p><strong>共有について</strong>: 本アプリの共有機能を使うと、駐車位置を示す Google マップの URL（緯度・経度を含みます）、階・柱番号、時刻が、端末の共有機能を通じて利用者が選んだ共有先（メッセージアプリ等）へ渡されます。共有先への送信は利用者の操作によるものであり、本アプリが送信先を制御することはありません。共有する相手をご確認ください。</p>
@@ -67,16 +67,17 @@
     </ul>
     <p>このほか、車の方向を示すために端末の方位センサー（コンパス）を使用します。この利用に権限は必要なく、センサーの値は案内の表示にのみ使い、保存・送信しません。</p>
     <p>写真は本アプリ専用の保存領域に保存するため、本アプリは写真ライブラリ・ストレージへのアクセス権限を使用しません。また、マイク・連絡先の権限も使用しません。</p>
-    <p>Android では、第 4 章の広告・課金の SDK が、その機能に必要な権限（広告 ID の利用、課金、ネットワーク状態の確認等）を追加することがあります。</p>
+    <p>Android では、第 4 章の地図・広告・課金の SDK が、その機能に必要な権限（広告 ID の利用、課金、ネットワーク状態の確認等）を追加することがあります。</p>
 
     <h2>4. 第三者サービス（地図・住所変換・広告・課金）</h2>
     <p>本アプリは、以下の第三者サービスを利用しています。これらのサービスへの送信は、各サービスの提供者のプライバシーポリシーに従って取り扱われます。</p>
 
-    <p><strong>(1) 地図の表示（OpenStreetMap）</strong><br>
-    <strong>送信先</strong>: OpenStreetMap Foundation（地図タイルの配信サーバー）<br>
+    <p><strong>(1) 地図の表示（Google Maps）</strong><br>
+    本アプリは、地図の表示に Google が提供する <strong>Google Maps SDK</strong>（Android 版・iOS 版）を利用しています。地図を表示するとき、以下の情報が Google に送信されます。駐車位置のメモや写真を Google に送信することはありませんが、表示する地図の範囲は駐車位置の近くになるため、<strong>位置に関する情報が地図の表示のために Google に送信されます</strong>。<br>
+    <strong>送信先</strong>: Google LLC<br>
     <strong>利用目的</strong>: 駐車位置の周りの地図の表示<br>
-    <strong>送信される情報</strong>: 表示する地図の範囲（駐車位置や現在地の周辺を示します）、IP アドレス、本アプリの識別名<br>
-    詳細: <a href="https://osmfoundation.org/wiki/Privacy_Policy">https://osmfoundation.org/wiki/Privacy_Policy</a></p>
+    <strong>送信される情報</strong>: 表示する地図の範囲（駐車位置や現在地の周辺を示します）、IP アドレス、端末とアプリの情報（OS・端末の種類・アプリの識別子など、SDK が通信に付ける情報）、本アプリに組み込んだ API キー<br>
+    詳細: Google プライバシーポリシー <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 
     <p><strong>(2) 住所変換（逆ジオコーディング）</strong><br>
     <strong>送信先</strong>: Android では Google LLC、iOS では Apple Inc.（いずれも端末の OS が提供する住所変換機能を通じて送信されます）<br>
@@ -133,6 +134,7 @@
       <li>第 2 章に記載した情報は、<strong>すべて利用者の端末内に保存</strong>されます。運営者はこれらのデータを保有・保管しません。</li>
       <li>駐車の記録は、利用者が削除するか、本アプリのデータを削除するか、本アプリをアンインストールするまで端末内に保持されます。</li>
       <li>車に戻った後の記録の写真は、設定した保存期間（初期設定は 90 日。30 日・90 日・180 日・365 日から選べます）を過ぎると自動で削除します。お気に入りに登録した記録の写真は削除しません。</li>
+      <li>地図のキャッシュは、Google Maps SDK が端末内に保存・管理します。設定画面の「すべてのデータを削除」の対象外で、これを使っても削除されません。本アプリをアンインストールすると削除されます。このほか、<strong>Android</strong> では端末の「設定」&rarr;「アプリ」&rarr; 本アプリ &rarr;「ストレージ」から本アプリのキャッシュを消去しても削除できます。<strong>iOS</strong> には本アプリのキャッシュだけを消去する設定が無いため、削除するには本アプリをアンインストールしてください。</li>
       <li>第 4 章の第三者サービスを通じて各提供者が収集するデータの保持期間は、各提供者のプライバシーポリシーに従います。</li>
     </ul>
     <p><strong>データの安全管理</strong>:</p>
@@ -150,7 +152,7 @@
 
     <h2>7. 利用者の権利（データの削除・広告 ID のリセット）</h2>
     <ul>
-      <li><strong>端末内データの削除</strong>: 本アプリの履歴画面から、駐車の記録を 1 件ずつ削除できます。設定画面の「すべてのデータを削除」を使うと、記録・写真・設定・地図の一時データをまとめて削除できます（「広告なし版」の購入状態は残ります）。本アプリをアンインストールすると、端末内に保存された本アプリのデータはすべて削除されます（iOS で iCloud 等のバックアップに含まれたデータは、そのバックアップを削除するまで残ります）。購入は、再インストール後に設定画面の「購入を復元」で戻せます。</li>
+      <li><strong>端末内データの削除</strong>: 本アプリの履歴画面から、駐車の記録を 1 件ずつ削除できます。設定画面の「すべてのデータを削除」を使うと、記録・写真・設定をまとめて削除できます（「広告なし版」の購入状態と地図のキャッシュは残ります。地図のキャッシュについては第 5 章をご覧ください）。本アプリをアンインストールすると、端末内に保存された本アプリのデータはすべて削除されます（iOS で iCloud 等のバックアップに含まれたデータは、そのバックアップを削除するまで残ります）。購入は、再インストール後に設定画面の「購入を復元」で戻せます。</li>
       <li><strong>位置情報・カメラの利用の停止</strong>: 端末の「設定」から、本アプリの位置情報・カメラの許可をいつでも取り消せます（Android: 「設定」&rarr;「アプリ」&rarr; 本アプリ &rarr;「権限」/ iOS: 「設定」&rarr; 本アプリ）。取り消した後は、駐車位置の記録や写真の撮影ができなくなります。</li>
       <li><strong>広告 ID のリセット／削除（Android）</strong>: Android の「設定」&rarr;「Google」&rarr;「広告」から、広告 ID のリセットまたは削除、およびパーソナライズ広告のオプトアウトが可能です。</li>
       <li><strong>広告に関する同意の変更</strong>: 同意が必要な地域では、本アプリの設定画面の「広告のプライバシー設定」から変更できます。</li>
@@ -165,7 +167,7 @@
     <h2>10. 本ポリシーの改定</h2>
     <p>運営者は、法令の変更やサービス内容の変更に応じて、本ポリシーを改定することがあります。重要な変更を行う場合は、本ポリシーの公開ページ上で告知します。改定後の本ポリシーは、公開ページに掲載された時点から効力を生じます。</p>
     <ul>
-      <li>最終改定日: 2026年11月5日</li>
+      <li>最終改定日: 2026年11月10日</li>
       <li>関連文書: <a href="./terms.html">利用規約</a> / <a href="./legal.html">特定商取引法に基づく表記</a></li>
     </ul>
 
@@ -179,7 +181,7 @@
   <!-- ============ English version ============ -->
   <section id="lang-en" hidden>
     <h1>Privacy Policy (Which Level?)</h1>
-    <p class="meta"><strong>Last updated: November 5, 2026 / Effective date: November 5, 2026 (initial version)</strong></p>
+    <p class="meta"><strong>Last updated: November 10, 2026 / Effective date: November 5, 2026 (initial version)</strong></p>
 
     <h2>1. Scope and App Information</h2>
     <p>This Privacy Policy (the "Policy") sets out how user information is handled in the mobile application "Which Level?" (Japanese name: 何階だっけ; Android package name and iOS bundle ID: com.arrowcodelab.whichlevel, the "App"), provided by an Individual Developer [operator: Arrow Code Lab].</p>
@@ -198,7 +200,7 @@
       <li><strong>Record status</strong>: When each record was created, whether the car is still parked or you have returned to it, and when you returned.</li>
       <li><strong>App settings and usage</strong>: Whether initial setup is complete, the last time and screen used, settings such as whether to open the camera right after saving, vibration, preferred map app and photo retention period, when the App last asked for a store rating, and startup timing records.</li>
       <li><strong>Purchase status</strong>: Whether the "Ad-free version" has been purchased.</li>
-      <li><strong>Temporary map data</strong>: A cache of map images (map tiles) that have been displayed.</li>
+      <li><strong>Map cache</strong>: Map data that has been displayed, temporarily stored on the device by the Google Maps SDK described in Section 4.</li>
     </ul>
     <p>The App has no account registration or login. It does not collect names, email addresses, phone numbers, contacts or similar information.</p>
     <p><strong>Sharing</strong>: When the user uses the App's share function, a Google Maps URL showing the parking location (including latitude and longitude), the level, the pillar number and the time are passed through the device's share function to the destination the user chooses (such as a messaging app). Sending to the destination is performed by the user's own action, and the App does not control the destination. Please check who you are sharing with.</p>
@@ -214,16 +216,17 @@
     </ul>
     <p>In addition, the App uses the device's compass to show the direction of the car. No permission is required for this, and the sensor values are used only for the guidance display and are neither stored nor transmitted.</p>
     <p>Because photos are saved in the App's private storage area, the App does not use permissions to access the photo library or storage. It also does not use the microphone or contacts permissions.</p>
-    <p>On Android, the advertising and billing SDKs described in Section 4 may add permissions needed for their functions (such as use of the Advertising ID, billing, and checking the network state).</p>
+    <p>On Android, the map, advertising and billing SDKs described in Section 4 may add permissions needed for their functions (such as use of the Advertising ID, billing, and checking the network state).</p>
 
     <h2>4. Third-Party Services (Maps, Reverse Geocoding, Advertising and Billing)</h2>
     <p>The App uses the following third-party services. Data sent to these services is handled in accordance with the privacy policy of each provider.</p>
 
-    <p><strong>(1) Map display (OpenStreetMap)</strong><br>
-    <strong>Recipient</strong>: OpenStreetMap Foundation (map tile servers)<br>
+    <p><strong>(1) Map display (Google Maps)</strong><br>
+    The App uses the <strong>Google Maps SDK</strong> (for Android and iOS), provided by Google, to display maps. When a map is displayed, the following information is sent to Google. The App does not send parking notes or photos to Google, but because the displayed map area is near the parking location, <strong>information related to your location is sent to Google in order to display the map</strong>.<br>
+    <strong>Recipient</strong>: Google LLC<br>
     <strong>Purpose</strong>: Displaying the map around the parking location<br>
-    <strong>Information sent</strong>: The map area to be displayed (which indicates the area around the parking location or current location), IP address, and the App's identifier<br>
-    Details: <a href="https://osmfoundation.org/wiki/Privacy_Policy">https://osmfoundation.org/wiki/Privacy_Policy</a></p>
+    <strong>Information sent</strong>: The map area to be displayed (which indicates the area around the parking location or current location), IP address, device and app information (such as the OS, device type and app identifier that the SDK attaches to its communications), and the API key built into the App<br>
+    Details: Google Privacy Policy <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 
     <p><strong>(2) Reverse geocoding</strong><br>
     <strong>Recipient</strong>: Google LLC on Android and Apple Inc. on iOS (sent through the geocoding function provided by the device's operating system)<br>
@@ -280,6 +283,7 @@
       <li>All of the information described in Section 2 is <strong>stored on the user's device</strong>. The operator does not hold or store this data.</li>
       <li>Parking records are kept on the device until the user deletes them, deletes the App's data, or uninstalls the App.</li>
       <li>Photos in records where you have returned to the car are automatically deleted after the configured retention period (90 days by default; 30, 90, 180 or 365 days can be selected). Photos in records marked as favorites are not deleted.</li>
+      <li>The map cache is stored and managed on the device by the Google Maps SDK. It is not covered by "Delete all data" on the settings screen and is not deleted by it. It is deleted when the App is uninstalled. In addition, on <strong>Android</strong> it can be deleted by clearing the App's cache from the device "Settings" &rarr; "Apps" &rarr; this App &rarr; "Storage". <strong>iOS</strong> has no setting to clear only the App's cache, so to delete it, uninstall the App.</li>
       <li>The retention period for data collected by each provider through the third-party services in Section 4 is subject to that provider's privacy policy.</li>
     </ul>
     <p><strong>Data security</strong>:</p>
@@ -297,7 +301,7 @@
 
     <h2>7. User Rights (Data Deletion and Advertising ID Reset)</h2>
     <ul>
-      <li><strong>Deleting on-device data</strong>: Parking records can be deleted one at a time from the App's history screen. "Delete all data" on the settings screen deletes all records, photos, settings and temporary map data at once (the purchase status of the "Ad-free version" is kept). Uninstalling the App deletes all of the App's data stored on the device (on iOS, data included in iCloud or other backups remains until that backup is deleted). Purchases can be recovered with "Restore purchase" on the settings screen after reinstalling.</li>
+      <li><strong>Deleting on-device data</strong>: Parking records can be deleted one at a time from the App's history screen. "Delete all data" on the settings screen deletes all records, photos and settings at once (the purchase status of the "Ad-free version" and the map cache are kept; see Section 5 for the map cache). Uninstalling the App deletes all of the App's data stored on the device (on iOS, data included in iCloud or other backups remains until that backup is deleted). Purchases can be recovered with "Restore purchase" on the settings screen after reinstalling.</li>
       <li><strong>Stopping the use of location and camera</strong>: You can revoke the App's location and camera permissions at any time from the device settings (Android: "Settings" &rarr; "Apps" &rarr; this App &rarr; "Permissions" / iOS: "Settings" &rarr; this App). After revoking them, the App can no longer record parking locations or take photos.</li>
       <li><strong>Resetting / deleting the Advertising ID (Android)</strong>: From the Android "Settings" &rarr; "Google" &rarr; "Ads", the user can reset or delete the advertising ID and opt out of personalized advertising.</li>
       <li><strong>Changing consent for advertising</strong>: In regions where consent is required, the user can change it from "Ad privacy settings" on the App's settings screen.</li>
@@ -312,7 +316,7 @@
     <h2>10. Changes to This Policy</h2>
     <p>The operator may revise this Policy in response to changes in laws or in the service. If any material change is made, it will be announced on the published page of this Policy. The revised Policy takes effect from the time it is posted on the published page.</p>
     <ul>
-      <li>Last updated: November 5, 2026</li>
+      <li>Last updated: November 10, 2026</li>
       <li>Related documents: <a href="./terms.html">Terms of Service</a> / <a href="./legal.html">Legal Notice</a></li>
     </ul>
 
