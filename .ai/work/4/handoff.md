@@ -21,7 +21,7 @@ edges:
   review->impl: 2
   review->pr: 1
   pr->done: 1
-events: 37
+events: 38
 ---
 
 # Issue #4 の索引
@@ -48,3 +48,4 @@ events: 37
 - concern [impl] Issue のうち人の作業は未対応: ポリシーの公開 URL（GitHub Pages）とサポート窓口の URL・メールの用意。また which-level#25（料金看板の OCR と AI で料金を試算）がポリシーに未反映の可能性があるが、#4 の範囲外のため触っていない … `events/20261110T105916-impl.yaml`
 - verification [impl] 受入条件「Google Maps についての記述がポリシーと利用規約に入っている」: which-level docs/privacy/google-maps.md と突き合わせた。§1 送信 3 項目（表示範囲・端末とアプリの情報・API キー）→ index.html 第 4 章 (1) 日英に有り（IP アドレスも追記）。§2 利用規約の追加利用規約 → terms.html 第 6 条 日英に有り（terms_maps へのリンク）、ポリシーの Google プライバシーポリシー参照 → index.html 第 4 章 (1) と terms.html 第 6 条に有り。§4 キャッシュ（SDK が保存・全データ削除で消えない・アプリ削除で消える）→ index.html 第 2・5・7 章 日英に有り。OSM の記述は 3 ページとも 0 件。公開 URL とサポート窓口は人の作業で未完（concern 記録済み） … `events/20261110T110416-impl.yaml`
 - concern [review] Major 20261110T110115-review.yaml（verification 無し）は中身としては解消済み（20261110T110416-impl.yaml の verification を根拠資料と突き合わせて確認）だが、impl が ref 付きの done を積んでいないため open のまま。review からは閉じられない（fak.js が拒否）。checkpoint 20261110T110514 の「review が確認して done」は積めておらず誤り。impl は ref: 20261110T110115-review.yaml で state: done の finding を 1 枚積むだけでよい（コード変更は不要） … `events/20261110T110524-review.yaml`
+- decision [pr] 人の判断（2026-11-10）: ポリシーの日付はそのまま（施行日は 2026年11月5日（初版）のまま）。公開 URL は後で人が指定する。サポート窓口は URL を明記せず、メールアドレス（arrow.code.lab@gmail.com）のみ提示する。メールは index.html 第 11 章・terms.html 第 15 条・legal.html に既に記載済みで、ページの変更は不要 … `events/20261110T111247-pr.yaml`

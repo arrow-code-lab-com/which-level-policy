@@ -1,0 +1,3 @@
+node: pr
+kind: decision
+summary: "人の判断（2026-11-10）: ポリシーの日付はそのまま（施行日は 2026年11月5日（初版）のまま）。公開 URL は後で人が指定する。サポート窓口は URL を明記せず、メールアドレス（arrow.code.lab@gmail.com）のみ提示する。メールは index.html 第 11 章・terms.html 第 15 条・legal.html に既に記載済みで、ページの変更は不要"
