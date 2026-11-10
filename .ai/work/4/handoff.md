@@ -1,33 +1,35 @@
 ---
 issue: 4
+pr: 5
 flow: ai-default-medium
-status: pr-running
-outcome: null
+status: pr-success
+outcome: ready
 evidence:
   spec_status: none
   has_issue: true
-  has_pr: false
+  has_pr: true
   tasks_total: 0
   tasks_done: 0
   integration: none
   open_major: 0
   merged: false
   accepted: false
-passed: [impl, review]
+passed: [impl, review, pr]
 attempts: { impl: 2, review: 2 }
 edges:
   impl->review: 3
   review->impl: 2
   review->pr: 1
-events: 36
+  pr->done: 1
+events: 37
 ---
 
 # Issue #4 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `pr-running`
-- フロー: `ai-default-medium` / 通過: `impl` → `review`
+- 現在地: `pr-success`（outcome: ready）
+- フロー: `ai-default-medium` / 通過: `impl` → `review` → `pr`
 - open な指摘: 0 件（Major 以上 0 件）
 
 ## 直近の経路
@@ -38,6 +40,7 @@ events: 36
 - review ↩ impl（Major 20261110T110115（verification 無し）の done が積まれておらず open のまま）
 - impl → review
 - review → pr
+- pr → done
 
 ## 記録（判断・懸念・検証・環境・質問）
 
