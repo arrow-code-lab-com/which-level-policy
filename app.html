@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>どこだっけ / Which Level? - アプリを入れる / Get the app</title>
+<meta name="description" content="駐車した階と柱を記録するアプリ「どこだっけ」。Google Play / App Store から入れられます。">
+<style>
+  :root { --fg:#1a1a1a; --muted:#555; --accent:#1565c0; --border:#ddd; --bg:#fff; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif; color: var(--fg); background: var(--bg); line-height: 1.8; margin: 0; padding: 0; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 24px 20px 64px; }
+  h1 { font-size: 1.6rem; border-bottom: 3px solid var(--accent); padding-bottom: 8px; }
+  a { color: var(--accent); word-break: break-all; }
+  .meta { color: var(--muted); font-size: 0.95rem; }
+  .toggle { position: sticky; top: 0; background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--border); z-index: 10; }
+  .toggle button { font: inherit; padding: 6px 18px; margin-right: 8px; border: 1px solid var(--accent); background: var(--bg); color: var(--accent); border-radius: 20px; cursor: pointer; }
+  .toggle button.active { background: var(--accent); color: #fff; }
+  .stores { list-style: none; padding: 0; margin: 24px 0; }
+  .stores li { border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin-bottom: 12px; }
+  .stores .name { font-weight: 600; }
+  .stores .soon { color: var(--muted); }
+  .notice { background: #f5f7fa; border-radius: 12px; padding: 14px 18px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="toggle">
+    <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ============ 日本語版 ============ -->
+  <section id="lang-ja">
+    <h1>どこだっけ（駐車位置メモ）</h1>
+    <p>駐車した階と柱を、写真と一緒に記録しておくアプリです。</p>
+    <p class="notice" data-ios-soon hidden>iPhone 版は準備中です。公開したら、このページから App Store へ進めるようにします。</p>
+    <ul class="stores">
+      <li><span class="name">Android</span>: <a data-play href="https://play.google.com/store/apps/details?id=com.arrowcodelab.whichlevel">Google Play で入れる</a></li>
+      <li><span class="name">iPhone</span>: <a data-app-store hidden>App Store で入れる</a><span class="soon" data-app-store-soon>準備中</span></li>
+    </ul>
+    <p><a href="./index.html">プライバシーポリシー</a> / <a href="./terms.html">利用規約</a></p>
+  </section>
+
+  <!-- ============ English version ============ -->
+  <section id="lang-en" hidden>
+    <h1>Which Level? (parking spot memo)</h1>
+    <p>An app that records the level and pillar where you parked, together with photos.</p>
+    <p class="notice" data-ios-soon hidden>The iPhone version is coming soon. Once it is released, this page will take you to the App Store.</p>
+    <ul class="stores">
+      <li><span class="name">Android</span>: <a data-play href="https://play.google.com/store/apps/details?id=com.arrowcodelab.whichlevel">Get it on Google Play</a></li>
+      <li><span class="name">iPhone</span>: <a data-app-store hidden>Download on the App Store</a><span class="soon" data-app-store-soon>Coming soon</span></li>
+    </ul>
+    <p><a href="./index.html">Privacy Policy</a> / <a href="./terms.html">Terms of Service</a></p>
+  </section>
+
+</div>
+
+<script>
+  // アプリの共有文がこのページを指すので、URL は変えない。行き先のストアはここだけで変えられる。
+  // App Store で公開したら、App Store Connect のアプリ ID（数字だけ）を入れる。
+  var APP_STORE_ID = null;
+  var APP_STORE_URL = APP_STORE_ID ? 'https://apps.apple.com/app/id' + APP_STORE_ID : null;
+  var PLAY_URL = 'https://play.google.com/store/apps/details?id=com.arrowcodelab.whichlevel';
+
+  function setLang(lang) {
+    var ja = document.getElementById('lang-ja');
+    var en = document.getElementById('lang-en');
+    var bja = document.getElementById('btn-ja');
+    var ben = document.getElementById('btn-en');
+    if (lang === 'en') {
+      ja.hidden = true; en.hidden = false;
+      bja.classList.remove('active'); ben.classList.add('active');
+      document.documentElement.lang = 'en';
+    } else {
+      en.hidden = true; ja.hidden = false;
+      ben.classList.remove('active'); bja.classList.add('active');
+      document.documentElement.lang = 'ja';
+    }
+  }
+
+  function each(selector, fn) {
+    Array.prototype.forEach.call(document.querySelectorAll(selector), fn);
+  }
+
+  // 受け取った人の言語で開く。日本語以外は英語にする。
+  var lang = (navigator.language || 'ja').toLowerCase();
+  setLang(lang.indexOf('ja') === 0 ? 'ja' : 'en');
+
+  if (APP_STORE_URL) {
+    each('[data-app-store]', function (a) { a.href = APP_STORE_URL; a.hidden = false; });
+    each('[data-app-store-soon]', function (s) { s.hidden = true; });
+  }
+
+  var ua = navigator.userAgent;
+  // iPadOS は既定で Mac と名乗るので、タッチの有無で見分ける。
+  var isIos = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/.test(ua);
+
+  if (isAndroid) {
+    location.replace(PLAY_URL);
+  } else if (isIos) {
+    if (APP_STORE_URL) {
+      location.replace(APP_STORE_URL);
+    } else {
+      each('[data-ios-soon]', function (p) { p.hidden = false; });
+    }
+  }
+</script>
+</body>
+</html>
