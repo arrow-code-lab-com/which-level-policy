@@ -1,0 +1,8 @@
+node: impl
+kind: run
+status: success
+outcome: 実装完了
+to: review
+sha: 9a007197147d55817c186400ed16dda110a70ba0
+model: claude-opus-5-5
+summary: 全ページと公開設定を読み、公開ジョブが app.html をコピーせず本番で 404 になっていた問題を直した。他の文面・JS に不具合は見つからず。ビルド・テストの手段はリポジトリに無い
