@@ -19,10 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      # 公開するのはポリシーのページだけ。.ai/ などは載せない
+      # 公開するページを名指しで載せる（.ai/ などは載せない）。ページを足したらここにも足す
       - run: |
           mkdir _site
-          cp index.html terms.html legal.html CNAME _site/
+          cp index.html terms.html legal.html app.html CNAME _site/
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
