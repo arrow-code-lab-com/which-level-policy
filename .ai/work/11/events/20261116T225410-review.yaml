@@ -1,0 +1,6 @@
+node: review
+kind: concern
+at: app.html:102
+summary: Android は描画前に必ず Play Store へ飛ばされ、app.html のリンクを読めない
+who: "このファイルの変更を持つ Issue の担当者（app.html は PR #10 / arrow-code-lab-com/which-level#64 の共有文の担当）"
+body: "Android visitors are always sent to the Play Store before the page renders, so they can never read app.html or use its privacy/terms links. 故障シナリオ: An Android user opens the shared link to check the privacy policy first. location.replace(PLAY_URL) runs at once, the page's links are never shown, and the back button can't return to it. In in-app browsers like LINE or Instagram, the https Play URL may open as a web page instead of the Play app.（出典: /code-review・今回の差分の範囲外）"

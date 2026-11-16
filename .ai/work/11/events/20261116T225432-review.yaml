@@ -1,0 +1,7 @@
+node: review
+kind: run
+status: success
+outcome: clean
+to: pr
+model: claude-opus-5-5
+summary: deploy.yml に app.html を足した修正は正しく Major 以上 0 件。Minor 3 件 open（§8 の直した/残した報告・impl の decision 0 件・コピー対象の手書き）。差分外 concern 7 件

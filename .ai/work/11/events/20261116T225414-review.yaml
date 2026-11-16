@@ -1,0 +1,6 @@
+node: review
+kind: concern
+at: app.html:68
+summary: setLang が 4 ページに逐語コピーされている
+who: "このファイルの変更を持つ Issue の担当者（app.html は PR #10 / arrow-code-lab-com/which-level#64 の共有文の担当）"
+body: "setLang is copied word for word into all four pages (index, terms, legal, app) instead of living in one shared script. 故障シナリオ: Any fix to the language toggle has to be made in four places, and the copies drift apart. A shared script would also have to be added to the hand-kept deploy list, which is more reason to fix that list properly.（出典: /code-review・今回の差分の範囲外）"

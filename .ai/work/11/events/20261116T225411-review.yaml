@@ -1,0 +1,6 @@
+node: review
+kind: concern
+at: app.html:105
+summary: APP_STORE_ID 設定後は iOS も無条件リダイレクトで履歴から page が消える
+who: "このファイルの変更を持つ Issue の担当者（app.html は PR #10 / arrow-code-lab-com/which-level#64 の共有文の担当）"
+body: "Once APP_STORE_ID is set, iOS gets the same unconditional redirect, which also replaces the page in history. 故障シナリオ: After the App Store release, an iPhone user is sent to the App Store right away. They can't see the page or its policy links, and going back skips the page entirely.（出典: /code-review・今回の差分の範囲外）"

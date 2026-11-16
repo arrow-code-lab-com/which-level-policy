@@ -1,0 +1,11 @@
+node: review
+kind: checkpoint
+sha: 9a007197147d55817c186400ed16dda110a70ba0
+summary: code-review 取り込み完了（指摘 9 件・採用 2・重複 0・範囲外 7）
+phase: code-review
+detail: |
+  実行: 実行した / target: PR #12 / effort: medium
+  手順 0 の差分ファイル一覧: 2 ファイル（gh pr diff 12 --name-only）
+  検算: 一覧内の file を持つ指摘 2 件 / 一覧外 7 件
+  採用 2 件（Critical 0 / Major 0 / Minor 2）。spec:28 は観点レビューの decision 0 件の Minor と趣旨が近いが file:line が異なるため別件で採用
+  範囲外 concern 7 件（app.html 6・index.html 1）/ 重複 0

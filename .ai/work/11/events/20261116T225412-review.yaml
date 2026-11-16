@@ -1,0 +1,6 @@
+node: review
+kind: concern
+at: app.html:65
+summary: APP_STORE_ID を形式チェックなしで連結している
+who: "このファイルの変更を持つ Issue の担当者（app.html は PR #10 / arrow-code-lab-com/which-level#64 の共有文の担当）"
+body: "APP_STORE_ID is concatenated without any check of its format. 故障シナリオ: A maintainer pastes 'id1234567890' (the form shown in App Store URLs) or a number with spaces. The result is https://apps.apple.com/app/idid1234567890, a broken URL that iOS users are then redirected to automatically.（出典: /code-review・今回の差分の範囲外）"

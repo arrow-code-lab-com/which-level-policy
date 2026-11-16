@@ -1,0 +1,6 @@
+node: review
+kind: concern
+at: app.html:44
+summary: app.html のフッターに特定商取引法に基づく表記へのリンクが無い
+who: "このファイルの変更を持つ Issue の担当者（app.html は PR #10 / arrow-code-lab-com/which-level#64 の共有文の担当）"
+body: "The footer links only to the privacy policy and terms, not to the legal notice, while the other pages link to each other. 故障シナリオ: Visitors on the app landing page can't reach the legal notice (特定商取引法に基づく表記), which covers the paid ad-free purchase.（出典: /code-review・今回の差分の範囲外）"

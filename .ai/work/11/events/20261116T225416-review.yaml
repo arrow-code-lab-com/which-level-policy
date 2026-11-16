@@ -1,0 +1,6 @@
+node: review
+kind: concern
+at: index.html:192
+summary: プライバシーポリシーの公開ページ・関連文書の一覧に app.html が無い
+who: このファイルの変更を持つ Issue の担当者
+body: "The 'public page' and 'related documents' lists in the privacy policy don't include app.html. 故障シナリオ: The privacy policy's list of public pages is incomplete now that app.html is deployed.（出典: /code-review・今回の差分の範囲外）"

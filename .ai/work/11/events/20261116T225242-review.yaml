@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: .ai/work/11/events
+fix: "pr 本文（または decision event）に、確認したファイル（index.html / terms.html / legal.html / app.html / README.md / CNAME / deploy.yml）と、直さずに残した判断（例: setLang の 4 ファイル重複は既存のまま残す）を列挙する"
+state: open
+summary: impl が decision / concern を 1 件も積んでいない（何を直し何を残したかの判断が events に無い）
+body: "Issue #11 の events に kind: decision / concern が 0 件。spec §8 は「『問題』の範囲と、直さずに残すものの線引き（実装が判断し、何を直して何を残したかを報告に書く）」としており、impl の run summary に「他の文面・JS に不具合は見つからず」とあるだけで、どのファイルをどの観点で見て直さないと判断したかが decision として残っていない。"

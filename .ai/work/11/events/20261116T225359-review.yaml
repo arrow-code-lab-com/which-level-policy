@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: .github/workflows/deploy.yml:25
+fix: "選択肢: (a) `cp *.html CNAME _site/` にする（ルート直下だけで .ai/ には届かない）— 推奨。(b) 名指しのまま残し、README の公開 URL 一覧と突き合わせる確認を手順に足す"
+state: open
+summary: 手で保つ許可リストに 1 語足す対症療法で、ページ追加時に載せ忘れる構造は残る
+body: "The fix patches the symptom by adding one more name to a hand-kept allowlist, plus a comment asking people to remember it, instead of fixing why new pages get left out. 故障シナリオ: The next HTML page someone adds (or a shared JS/CSS file) builds fine but returns 404 in production, which is exactly how app.html was missed in PR #10. Copying `*.html CNAME` (the glob doesn't reach into .ai/) or excluding by rule would remove this whole class of bug.（出典: /code-review）"

@@ -1,0 +1,14 @@
+node: review
+kind: checkpoint
+sha: 9a007197147d55817c186400ed16dda110a70ba0
+summary: 観点レビュー完了（指摘 1 件）
+phase: rules
+detail: |
+  quality: 該当なし（変更は deploy.yml のコピー対象 1 語追加とコメント更新のみ。意図はコメントで明確）
+  test: 該当なし（リポジトリにテスト・ビルド手段が無い静的サイト）
+  security: 該当なし（公開対象は名指しのまま .ai/ 等を載せない。機密の追加なし）
+  performance: 該当なし（静的ファイル 1 枚の追加のみ）
+  conventions: 該当なし（README の公開 URL 一覧と公開対象が一致した）
+  error-handling: 該当なし（コピー元欠落時は cp が失敗しジョブが止まる既定の挙動）
+  refactoring: 該当なし（同種の漏れは README 記載の 4 ページと CNAME で他に無いことを確認）
+  計画整合: plan / task なし（tasks_total 0）のため #1 #2 は判定不能。#3 受入条件の定義なし。#4 decision/concern 0 件で Minor 1 件。#5 working tree clean。#6 絶対パス混入なし

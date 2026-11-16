@@ -1,0 +1,8 @@
+node: review
+kind: finding
+severity: Minor
+at: .ai/specs/spec-20261117-074954.md:28
+fix: pr 本文に、確認した全ファイルと「直したもの / 直さずに残したもの（理由付き）」を列挙して §8 を満たす。残す項目は concern として積まれた /code-review の範囲外指摘（app.html の即時リダイレクト・APP_STORE_ID の形式未検証・PLAY_URL 三重記述・setLang 重複・app.html のフッターに legal.html 無し）を参照する
+state: open
+summary: spec のゴール（全公開ページを読み問題を直す）に対し、PR は deploy のコピー対象に app.html を足しただけ
+body: "The spec's goal is to read every public page (index/terms/legal/app.html, deploy.yml, README, CNAME) and fix the problems found, but the PR only adds app.html to the deploy copy list. 故障シナリオ: Merging this closes #11 while the other problems in the pages are neither fixed nor listed as deliberately left alone. §8 requires the report to say what was fixed and what was kept, and nothing in the PR does that.（出典: /code-review）"

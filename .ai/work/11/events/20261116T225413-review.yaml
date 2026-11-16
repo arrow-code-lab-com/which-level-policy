@@ -1,0 +1,6 @@
+node: review
+kind: concern
+at: app.html:41
+summary: Play Store の URL が 3 か所にハードコードされている
+who: "このファイルの変更を持つ Issue の担当者（app.html は PR #10 / arrow-code-lab-com/which-level#64 の共有文の担当）"
+body: "The Play Store URL is hard-coded three times: in PLAY_URL and in the two data-play hrefs. 故障シナリオ: If the package ID or URL changes, it's easy to update PLAY_URL and miss the hrefs (or the reverse), so the redirect and the visible links point to different places. Setting the [data-play] hrefs from PLAY_URL, as the script already does for the App Store link, removes the duplication.（出典: /code-review・今回の差分の範囲外）"
