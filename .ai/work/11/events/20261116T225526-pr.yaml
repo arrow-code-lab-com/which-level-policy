@@ -1,0 +1,9 @@
+node: pr
+kind: run
+status: success
+outcome: ready
+to: done
+pr: 12
+sha: 9a007197147d55817c186400ed16dda110a70ba0
+model: claude-sonnet-5-5
+summary: "PR #12 の本文を仕上げ Draft を解除した。直したもの・確かめたもの・残したものを本文に記載"

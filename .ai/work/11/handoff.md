@@ -2,8 +2,8 @@
 issue: 11
 pr: 12
 flow: ai-default-medium
-status: pr-running
-outcome: null
+status: pr-success
+outcome: ready
 evidence:
   spec_status: agreed
   has_issue: true
@@ -14,24 +14,25 @@ evidence:
   open_major: 0
   merged: false
   accepted: false
-passed: [triage, impl, review]
+passed: [triage, impl, review, pr]
 attempts: {}
 edges:
   triage->impl: 1
   impl->review: 1
   review->pr: 1
+  pr->done: 1
 artifacts:
   triage:
     - .ai/specs/spec-20261117-074954.md
-events: 18
+events: 19
 ---
 
 # Issue #11 の索引
 
 この索引は `events/` から機械的に生成される写しです。手で書き換えないでください（次の記録で上書きされます）。
 
-- 現在地: `pr-running`
-- フロー: `ai-default-medium` / 通過: `triage` → `impl` → `review`
+- 現在地: `pr-success`（outcome: ready）
+- フロー: `ai-default-medium` / 通過: `triage` → `impl` → `review` → `pr`
 - open な指摘: 3 件（Major 以上 0 件）
 
 ## open な指摘
@@ -49,6 +50,7 @@ events: 18
 - triage → impl
 - impl → review
 - review → pr
+- pr → done
 
 ## 記録（判断・懸念・検証・環境・質問）
 
