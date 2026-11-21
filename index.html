@@ -32,7 +32,7 @@
   <!-- ============ 日本語版 ============ -->
   <section id="lang-ja">
     <h1>プライバシーポリシー（どこだっけ）</h1>
-    <p class="meta"><strong>制定日: 2026年11月16日 / 施行日: 2026年11月16日</strong></p>
+    <p class="meta"><strong>制定日: 2026年11月16日 / 最終改定日: 2026年11月21日 / 施行日: 2026年11月21日</strong></p>
 
     <h2>1. 適用範囲とアプリ情報</h2>
     <p>本プライバシーポリシー（以下「本ポリシー」）は、個人開発者（Individual Developer）〔運営者: Arrow Code Lab〕が提供するモバイルアプリケーション「どこだっけ」（英語名: Which Level?、Android のパッケージ名および iOS のバンドル ID: com.arrowcodelab.whichlevel、以下「本アプリ」）における利用者情報の取り扱いについて定めるものです。</p>
@@ -40,29 +40,30 @@
     <p>本アプリは、欧州経済領域（EEA）、英国およびスイスでは提供していません。</p>
 
     <h2>2. 本アプリで取り扱う情報</h2>
-    <p>本アプリでは、以下の情報を扱います。これらの情報は<strong>すべて利用者の端末内に保存され、運営者のサーバーへ送信されることはありません</strong>（本アプリは運営者が管理するサーバーを持ちません）。外部へ送信される情報は、第 4 章に記載したものに限られます。</p>
+    <p>本アプリでは、以下の情報を扱います。これらの情報は<strong>利用者の端末内に保存されます</strong>。本アプリは現在、運営者が管理するサーバーを持たず、これらの情報を運営者へ送信していません。外部へ送信される情報は、第 4 章に記載したものに限られます。今後、クラウドの AI サービス等を使う機能を追加する場合の取り扱いは、第 4 章 (9) をご覧ください。</p>
     <ul>
-      <li><strong>駐車位置（位置情報）</strong>: 駐車した場所の緯度・経度とその精度。本アプリを開いたときに、その時刻と現在地を駐車の記録として自動で保存します。車までの距離・方向の案内にも現在地を使用します。「車から降りたら自動で記録」をオンにした場合は、車との接続が切れたときにも位置を取得します（第 3 章をご覧ください）。</li>
+      <li><strong>駐車位置（位置情報）</strong>: 駐車した場所の緯度・経度とその精度。本アプリを開いたときに、その時刻と現在地を駐車の記録として自動で保存します。車までの距離・方向の案内にも現在地を使用します。「車から降りたら自動で記録」をオンにした場合は、車との接続が切れたときにも位置を取得します（第 3 章をご覧ください）。また、Android のクイック設定のタイル、または iOS の Siri・「ショートカット」アプリから「駐車位置を保存」を利用者が実行した場合は、そのときに現在地を 1 回取得し、次に本アプリを開いたときに駐車の記録にします。</li>
       <li><strong>気圧</strong>: 駐車場の何階にいるかを判定するために、端末の気圧センサーで計測した気圧とその計測時刻。</li>
-      <li><strong>利用者が入力した情報</strong>: 階・柱番号・メモ・お気に入りの設定。</li>
+      <li><strong>利用者が入力した情報</strong>: 階・柱番号・メモ・お気に入りの設定、手で入力・修正した駐車料金の規則（日本国内のみ）。</li>
       <li><strong>写真</strong>: 本アプリ内のカメラで撮影した駐車場所の周りや料金看板の写真と、写真に付けたラベル（1 件の記録につき 5 枚まで。音声は記録しません）。写真は本アプリ専用の保存領域に保存され、端末の写真ギャラリーには表示されません。</li>
       <li><strong>写真から読み取った文字</strong>: 写真に写った柱番号や案内表示などの文字。文字の読み取りは、Google ML Kit の文字認識機能を使って<strong>端末内で処理</strong>し、写真を外部へ送信することはありません。</li>
-      <li><strong>料金看板から読み取った料金</strong>（日本国内のみ）: 料金看板の写真から読み取った料金の規則と、それをもとにした駐車料金の試算。料金看板の文字の読み取りと料金の規則の組み立ては<strong>端末内で処理</strong>し、写真や読み取った文字を外部へ送信することはありません（第 4 章 (7) をご覧ください）。料金の読み取りと試算は、端末の地域の設定が日本の場合（地域が設定されていない場合は、言語が日本語の場合）にだけ行い、それ以外では料金看板の写真を保存するだけにします。</li>
+      <li><strong>料金看板から読み取った料金</strong>（日本国内のみ）: 料金看板の写真から読み取った料金の規則と、それをもとにした駐車料金の試算。料金看板の文字の読み取りと料金の規則の組み立ては<strong>端末内で処理</strong>し、写真や読み取った文字を外部へ送信することはありません（第 4 章 (8) をご覧ください）。料金の読み取りと試算は、端末の地域の設定が日本の場合（地域が設定されていない場合は、言語が日本語の場合）にだけ行い、それ以外では料金看板の写真を保存するだけにします。</li>
       <li><strong>地名</strong>: 駐車位置の緯度・経度から取得した地名（第 4 章の住所変換を使用します）。</li>
       <li><strong>記録の状態</strong>: 記録の作成日時、駐車中か、車に戻ったか、戻った時刻。</li>
       <li><strong>自動での記録のデータ</strong>（「車から降りたら自動で記録」をオンにした場合のみ）: 車との接続が切れたときに取り置いた時刻・位置（緯度・経度・精度）・移動の速さ・気圧。次に本アプリを開いたときに駐車の記録にし、取り置きは消します。Android では、車として覚えた Bluetooth 機器の名前と Bluetooth アドレス、およびそれを Android Auto から自動で覚えたか利用者が選んだかも保存します。</li>
       <li><strong>除外する場所</strong>（「広告なし版」で「車から降りたら自動で記録」を使う場合のみ）: 自宅・職場など、車から降りても記録しない場所として利用者が登録した場所の名前・緯度・経度・範囲の半径（5 件まで）。登録の画面では、現在地を初期位置として地図に表示します。</li>
-      <li><strong>アプリの設定・利用状況</strong>: 初期設定の完了、最後に使用した日時と画面、駐車を記録したらすぐカメラを開くか・振動・料金看板を写真撮影の機能で撮るか・使用する地図アプリ・写真の保存期間・「車から降りたら自動で記録」のオン／オフなどの設定、アプリの評価のお願いを表示した日時、起動にかかった時間などの記録。</li>
+      <li><strong>アプリの設定・利用状況</strong>: 初期設定の完了、最後に使用した日時と画面、駐車を記録したらすぐカメラを開くか・振動・料金看板を写真撮影の機能で撮るか・使用する地図アプリ・写真の保存期間・画面の外観（ライト／ダーク）・「車から降りたら自動で記録」とその通知のオン／オフ・料金の節目の通知のオン／オフと何分前に知らせるかなどの設定、アプリの評価のお願いを表示した日時、アプリの更新のお知らせを閉じた版と日時、起動にかかった時間などの記録。</li>
       <li><strong>購入状態</strong>: 「広告なし版」を購入済みかどうか、およびストアが続けて「購入が無い」と答えた回数（写真の保存期間を無料版の期間へ戻すかどうかの判断に使います）。</li>
       <li><strong>地図のキャッシュ</strong>: 第 4 章の Google Maps SDK が、表示した地図のデータを端末内に一時保存したもの。</li>
     </ul>
     <p>本アプリには、アカウント登録・ログインの機能はありません。氏名・メールアドレス・電話番号・連絡先などの情報は取得しません。</p>
-    <p><strong>共有について</strong>: 本アプリの共有機能を使うと、駐車位置を示す Google マップの URL（緯度・経度を含みます）、階・柱番号、時刻が、端末の共有機能を通じて利用者が選んだ共有先（メッセージアプリ等）へ渡されます。共有先への送信は利用者の操作によるものであり、本アプリが送信先を制御することはありません。共有する相手をご確認ください。</p>
+    <p><strong>共有について</strong>: 本アプリの共有機能を使うと、駐車位置を示す Google マップの URL（緯度・経度を含みます）、階・柱番号、時刻、本アプリの名前と本アプリのストアのページへ案内するページの URL が、端末の共有機能を通じて利用者が選んだ共有先（メッセージアプリ等）へ渡されます。共有先への送信は利用者の操作によるものであり、本アプリが送信先を制御することはありません。共有する相手をご確認ください。</p>
+    <p><strong>ホーム画面のウィジェットについて</strong>（Android のみ）: ウィジェットをホーム画面に置いた場合、駐車中の階・柱番号・経過時間・料金の試算をホーム画面に表示します。表示する内容は端末内で作り、外部へ送信しません。ホーム画面は周りの人から見える場合がありますのでご注意ください。</p>
 
     <h2>3. 端末の権限とその用途</h2>
     <p>本アプリは、機能提供のために以下の権限を使用します。権限は該当機能の利用時に要求され、利用者が許可を拒否した場合、当該機能が利用できないことがあります。</p>
     <ul>
-      <li><strong>位置情報</strong>（Android: ACCESS_FINE_LOCATION、ACCESS_COARSE_LOCATION / iOS: 使用中の位置情報）: 駐車位置の記録と、車までの案内に使用します。下記の「車から降りたら自動で記録」をオンにしない限り、位置は本アプリの使用中のみ取得し、バックグラウンドでは取得しません。iOS で「おおよその位置」のみを許可している場合は、駐車位置の記録と案内のときに限り、一時的に正確な位置の使用を求めることがあります。</li>
+      <li><strong>位置情報</strong>（Android: ACCESS_FINE_LOCATION、ACCESS_COARSE_LOCATION / iOS: 使用中の位置情報）: 駐車位置の記録と、車までの案内に使用します。下記の「車から降りたら自動で記録」をオンにしない限り、位置は本アプリの使用中のみ取得し、バックグラウンドでは取得しません。Android のクイック設定のタイル、または iOS の Siri・「ショートカット」アプリから「駐車位置を保存」を利用者が実行したときも、そのときに限り現在地を 1 回取得します。iOS で「おおよその位置」のみを許可している場合は、駐車位置の記録と案内のときに限り、一時的に正確な位置の使用を求めることがあります。</li>
       <li><strong>バックグラウンドの位置情報</strong>（Android: ACCESS_BACKGROUND_LOCATION / iOS: 位置情報の「常に」）: 設定画面の「車から降りたら自動で記録」を利用者がオンにした場合にだけ求めます。車から降りるときは本アプリが閉じているため、<strong>車との接続が切れたときに限り、本アプリを使用していなくても現在地を 1 回だけ取得</strong>し、気圧とあわせて端末内に取り置きます。取り置いた値は、次に本アプリを開いたときに駐車の記録になります。それ以外のときにバックグラウンドで位置を取得することはなく、位置を継続して追跡することもありません。この機能はオフが初期設定で、オフにすると、まだ記録にしていない取り置きも削除します。
         <ul>
           <li><strong>Android</strong>: 覚えた車の Bluetooth 機器との接続が切れたときに取得します。</li>
@@ -73,15 +74,16 @@
       <li><strong>Bluetooth</strong>（Android のみ。Android 12 以降: BLUETOOTH_CONNECT / Android 11 以前: BLUETOOTH）: 「車から降りたら自動で記録」をオンにした場合に、車の Bluetooth との接続・切断を知り、車を見分けるために使用します。ペアリング済みの機器の名前とアドレスを読み、車として選んだ（または Android Auto から自動で覚えた）機器だけを端末内に保存します。周りの Bluetooth 機器の検索や、位置の推定には使用しません。</li>
       <li><strong>カメラ</strong>（Android: CAMERA / iOS: カメラ）: 駐車場所の周りの写真の撮影に使用します。許可しなくても、メモなどの記録は保存できます。</li>
       <li><strong>モーションセンサー</strong>（iOS: モーションとフィットネス）: 気圧の計測により、駐車場の何階にいるかを判定するために使用します。Android では、気圧センサーの使用に権限は必要ありません。</li>
+      <li><strong>通知</strong>（Android 13 以降: POST_NOTIFICATIONS / iOS: 通知）: 「車から降りたら自動で記録」で記録したときのお知らせと、料金の節目（無料の時間の終わり・最大料金に達したとき・最大料金の期間が明ける前）のお知らせに使用します。利用者がこれらのお知らせをオンにしたときに求めます。通知は本アプリが端末内で予約・表示するもので、通知の文面には時刻や料金などが含まれます。ロック画面に表示される場合がありますので、必要に応じて端末の通知の設定を変更してください。</li>
       <li><strong>振動</strong>（Android: VIBRATE）: 操作時や案内時の振動に使用します。</li>
-      <li><strong>インターネット</strong>（Android: INTERNET）: 第 4 章に記載した地図・住所変換・広告・課金の通信に使用します。</li>
+      <li><strong>インターネット</strong>（Android: INTERNET）: 第 4 章に記載した地図・住所変換・広告・課金・アプリの更新の確認の通信に使用します。</li>
     </ul>
     <p>Android で「車から降りたら自動で記録」をオンにしている場合、車の候補（カーオーディオ・ハンズフリーとして名乗る機器）と Bluetooth で接続したあとに、Android Auto が使われているかどうかを端末内で確かめ、使われていればその機器を車として覚えます。Android Auto の利用状況を保存・送信することはありません。</p>
     <p>このほか、車の方向を示すために端末の方位センサー（コンパス）を使用します。この利用に権限は必要なく、センサーの値は案内の表示にのみ使い、保存・送信しません。</p>
     <p>写真は本アプリ専用の保存領域に保存するため、本アプリは写真ライブラリ・ストレージへのアクセス権限を使用しません。また、連絡先の権限は使用しません。マイクも使用しません（iOS では、写真の撮影に使うカメラの部品の都合でマイクの用途の説明を本アプリに含めていますが、本アプリは音声を記録せず、マイクの許可を求めません）。</p>
     <p>Android では、第 4 章の地図・広告・課金の SDK が、その機能に必要な権限（広告 ID の利用、課金、ネットワーク状態の確認等）を追加することがあります。</p>
 
-    <h2>4. 第三者サービス（地図・住所変換・広告・課金）</h2>
+    <h2>4. 第三者サービス（地図・住所変換・広告・課金・AI）</h2>
     <p>本アプリは、以下の第三者サービスを利用しています。これらのサービスへの送信は、各サービスの提供者のプライバシーポリシーに従って取り扱われます。</p>
 
     <p><strong>(1) 地図の表示（Google Maps）</strong><br>
@@ -129,30 +131,46 @@
     <strong>送信される情報</strong>: 購入に関する情報（商品、購入の状態等）</p>
     <p>また、本アプリはストアの評価画面（Google Play のアプリ内レビュー / App Store の評価）を表示することがあります。評価の送信は各ストアが処理し、運営者は評価の内容を受け取りません。</p>
 
-    <p><strong>(5) 外部の地図アプリ</strong><br>
+    <p><strong>(5) アプリの更新の確認（Google Play / App Store）</strong><br>
+    本アプリの新しい版があるかを確かめ、本アプリ上でお知らせするために、各ストアに問い合わせます。更新のダウンロード・インストールは各ストアが処理します。<br>
+    <strong>送信先</strong>: Android では Google LLC およびその関連会社（Google Play のアプリ内アップデートの機能）、iOS では Apple Inc.（App Store の検索の API）<br>
+    <strong>利用目的</strong>: 新しい版の有無の確認、更新の案内<br>
+    <strong>送信される情報</strong>: Android では Google Play の機能が通信に付ける情報（本アプリの識別子・版など）、iOS では本アプリのバンドル ID と端末の地域の設定（国）。あわせて、IP アドレス等の通信に必要な情報が送信されます。</p>
+
+    <p><strong>(6) 外部の地図アプリ</strong><br>
     車までの道順を表示するとき、利用者が選んだ地図アプリ（Google マップ / Apple マップ）を開き、駐車位置の緯度・経度を渡します。地図アプリでの取り扱いは、それぞれの提供者のプライバシーポリシーに従います。</p>
 
-    <p><strong>(6) 文字認識（Google ML Kit）</strong><br>
+    <p><strong>(7) 文字認識（Google ML Kit）</strong><br>
     写真からの文字の読み取りは端末内で処理し、写真や読み取った文字は送信しません。ただし、ML Kit は機能の維持・改善のため、利用状況や性能に関する情報を Google に送信することがあります。<br>
     <strong>送信先</strong>: Google LLC<br>
     <strong>利用目的</strong>: ML Kit の動作状況の把握、機能の維持・改善<br>
     <strong>送信される情報</strong>: デバイス情報（端末モデル・OS バージョン等）、アプリの情報、ML Kit の利用状況・性能に関する情報<br>
     詳細: <a href="https://developers.google.com/ml-kit/terms">https://developers.google.com/ml-kit/terms</a></p>
 
-    <p><strong>(7) 料金看板の読み取り（端末内 AI。日本国内のみ）</strong><br>
+    <p><strong>(8) 料金看板の読み取り（端末内 AI。日本国内のみ）</strong><br>
     料金看板の写真から料金の規則を組み立てるときは、端末に備わる AI を使い、<strong>端末内で処理</strong>します。看板の写真や読み取った文字、料金の規則を外部へ送信することはありません。端末内 AI を使えない端末では、本アプリ内の処理だけで読み取ります。</p>
     <ul>
-      <li><strong>Android</strong>: Google の Gemini Nano（端末の AICore 上で動くもの）を、ML Kit の生成 AI の機能（GenAI Prompt API）を通じて使います。ML Kit の利用状況・性能に関する情報の送信は、上記 (6) と同じです。AI のモデルの取得は端末（AICore）が行い、本アプリが取得を求めることはありません。</li>
+      <li><strong>Android</strong>: Google の Gemini Nano（端末の AICore 上で動くもの）を、ML Kit の生成 AI の機能（GenAI Prompt API）を通じて使います。ML Kit の利用状況・性能に関する情報の送信は、上記 (7) と同じです。AI のモデルの取得は端末（AICore）が行い、本アプリが取得を求めることはありません。</li>
       <li><strong>iOS</strong>: Apple の Foundation Models（Apple Intelligence の端末内のモデル）を使います。</li>
     </ul>
 
-    <p>なお、本アプリは上記以外に、Firebase Analytics、Crashlytics 等の分析・クラッシュレポートを目的とした外部送信 SDK を使用していません。想定外のエラーが起きたときは画面にお知らせを出すだけで、エラーの内容をどこにも送信しません。プッシュ通知も使用しません。</p>
+    <p><strong>(9) クラウドの AI サービス等の利用（今後追加する場合）</strong><br>
+    本アプリは現在、写真や写真から読み取った文字を、外部の AI サービスへ送信していません。今後、料金看板や柱・階の表示の読み取りの精度を上げるため、または新しい機能を提供するために、写真・写真から読み取った文字・料金の規則・駐車位置などの情報を、外部の AI サービス（例: Google の Gemini API 等）や、運営者が管理または委託するサーバーへ送信して処理する機能を追加する場合があります。その場合は、次のとおり取り扱います。</p>
+    <ul>
+      <li>送信先・送信する情報・利用目的は、その機能の提供を始める前に本ポリシーに追記します。</li>
+      <li>送信は、利用者がその機能を使うことを選んだとき（設定でオンにしたとき、または送信の前に表示する確認に同意したとき等）に行います。その機能を使わない場合は、これまでどおり端末内の処理だけを使います。</li>
+      <li>送信した情報は、AI サービスの提供者の規約・プライバシーポリシーに従って取り扱われます。提供者が、送信された情報を一定期間保存する場合があります。</li>
+      <li>読み取りの精度の改善のため、運営者が送信された情報（写真等）を保存し、検証や改善に使う場合があります。その場合は、保存する情報・保存期間・削除の方法を本ポリシーに記載し、利用者の同意を得たうえで行います。</li>
+      <li>写真には、人の顔や他の車のナンバープレートなどが写り込む場合があります。送信する前に、写り込みにご注意ください。</li>
+    </ul>
+
+    <p>なお、本アプリは現在、上記以外に、Firebase Analytics、Crashlytics 等の分析・クラッシュレポートを目的とした外部送信 SDK を使用していません。想定外のエラーが起きたときは画面にお知らせを出すだけで、エラーの内容をどこにも送信しません。通知は本アプリが端末内で予約して表示するもので、運営者のサーバー等から送るプッシュ通知は使用していません。</p>
 
     <h2>5. データの保存場所と保持期間</h2>
     <ul>
-      <li>第 2 章に記載した情報は、<strong>すべて利用者の端末内に保存</strong>されます。運営者はこれらのデータを保有・保管しません。</li>
+      <li>第 2 章に記載した情報は、<strong>利用者の端末内に保存</strong>されます。運営者は現在、これらのデータを保有・保管していません（第 4 章 (9) の機能を追加し、利用者の同意を得て保存する場合を除きます）。</li>
       <li>駐車の記録は、利用者が削除するか、本アプリのデータを削除するか、本アプリをアンインストールするまで端末内に保持されます。</li>
-      <li>車に戻った後の記録の写真は、設定した保存期間を過ぎると自動で削除します。保存期間は、無料版では 7 日です。「広告なし版」では 7 日・30 日・90 日・180 日・365 日・無期限から選べます（無期限を選ぶと自動では削除しません）。「広告なし版」の購入が無いことをストアが続けて確認した場合（返金を含みます）は、保存期間を 7 日に戻します。お気に入りに登録した記録の写真は削除しません。</li>
+      <li>車に戻った後の記録の写真は、設定した保存期間を過ぎると自動で削除します。保存期間は、無料版では 7 日です。「広告なし版」では 7 日・30 日・90 日・180 日・365 日・無期限から選べます（無期限を選ぶと自動では削除しません）。「広告なし版」の購入が無いことをストアが続けて確認した場合（返金を含みます）は、保存期間を 7 日に戻します。お気に入りに登録した記録の写真は削除しません（お気に入りは、無料版では 3 件まで登録できます。「広告なし版」の購入が無いことをストアが続けて確認した場合は、新しいものから 3 件を残してお気に入りを外します）。</li>
       <li>除外する場所は、利用者が削除するか、「すべてのデータを削除」を使うか、本アプリをアンインストールするまで端末内に保持されます。「広告なし版」の購入が無くなった場合も登録は残り、除外として使わなくなるだけです。</li>
       <li>「車から降りたら自動で記録」で取り置いた時刻・位置・気圧は、次に本アプリを開いたときに駐車の記録にするか破棄し、取り置きからは削除します。取り込まれないまま切断が続いた場合も、新しいものから一定の件数だけを残します。</li>
       <li>地図のキャッシュは、Google Maps SDK が端末内に保存・管理します。設定画面の「すべてのデータを削除」の対象外で、これを使っても削除されません。本アプリをアンインストールすると削除されます。このほか、<strong>Android</strong> では端末の「設定」&rarr;「アプリ」&rarr; 本アプリ &rarr;「ストレージ」から本アプリのキャッシュを消去しても削除できます。<strong>iOS</strong> には本アプリのキャッシュだけを消去する設定が無いため、削除するには本アプリをアンインストールしてください。</li>
@@ -168,14 +186,15 @@
     </ul>
 
     <h2>6. 第三者提供</h2>
-    <p>運営者は、利用者の端末内データを取得しないため、これを第三者へ提供することはありません。</p>
-    <p>第三者へのデータの送信は、第 4 章に記載した地図の表示、住所変換、広告配信、アプリ内課金、ストアの評価、外部の地図アプリ、文字認識（料金看板の読み取りを含みます）に関するもののみです。それ以外の目的で第三者へ利用者データを提供・販売することはありません。</p>
+    <p>運営者は現在、利用者の端末内データを取得していないため、これを第三者へ提供することはありません。</p>
+    <p>第三者へのデータの送信は、第 4 章に記載した地図の表示、住所変換、広告配信、アプリ内課金、ストアの評価、アプリの更新の確認、外部の地図アプリ、文字認識（料金看板の読み取りを含みます）に関するもの、および第 4 章 (9) により今後追加する機能で本ポリシーに追記するもののみです。法令に基づく場合を除き、それ以外の目的で第三者へ利用者データを提供・販売することはありません。</p>
 
     <h2>7. 利用者の権利（データの削除・広告 ID のリセット）</h2>
     <ul>
       <li><strong>端末内データの削除</strong>: 本アプリの履歴画面から、駐車の記録を 1 件ずつ削除できます。設定画面の「すべてのデータを削除」を使うと、記録・写真・設定をまとめて削除できます。「車から降りたら自動で記録」もオフになり、取り置きと覚えた車の Bluetooth 機器も削除します（「広告なし版」の購入状態と地図のキャッシュは残ります。地図のキャッシュについては第 5 章をご覧ください）。本アプリをアンインストールすると、端末内に保存された本アプリのデータはすべて削除されます（iOS で iCloud 等のバックアップに含まれたデータは、そのバックアップを削除するまで残ります）。購入は、再インストール後に設定画面の「購入を復元」で戻せます。</li>
       <li><strong>位置情報・カメラの利用の停止</strong>: 端末の「設定」から、本アプリの位置情報・カメラの許可をいつでも取り消せます（Android: 「設定」&rarr;「アプリ」&rarr; 本アプリ &rarr;「権限」/ iOS: 「設定」&rarr; 本アプリ）。取り消した後は、駐車位置の記録や写真の撮影ができなくなります。</li>
       <li><strong>自動での記録の停止</strong>: 設定画面の「車から降りたら自動で記録」をオフにすると、車との接続が切れても位置を取得しなくなります。端末の「設定」から、バックグラウンドの位置情報（Android: 位置情報を「アプリの使用中のみ許可」に変更 / iOS: 位置情報を「このAppの使用中のみ許可」に変更）や Bluetooth（Android: 「付近のデバイス」）の許可を取り消すこともできます。iOS では、「ショートカット」アプリで設定したオートメーションを削除することでも止められます。</li>
+      <li><strong>通知の停止</strong>: 本アプリの設定画面で各お知らせをオフにするか、端末の「設定」から本アプリの通知の許可を取り消すと、通知を表示しなくなります。</li>
       <li><strong>広告 ID のリセット／削除（Android）</strong>: Android の「設定」&rarr;「Google」&rarr;「広告」から、広告 ID のリセットまたは削除、およびパーソナライズ広告のオプトアウトが可能です。</li>
       <li><strong>広告に関する同意の変更</strong>: 同意が必要な地域では、本アプリの設定画面の「広告のプライバシー設定」から変更できます。</li>
     </ul>
@@ -188,9 +207,11 @@
 
     <h2>10. 本ポリシーの改定</h2>
     <p>運営者は、法令の変更やサービス内容の変更に応じて、本ポリシーを改定することがあります。重要な変更を行う場合は、本ポリシーの公開ページ上で告知します。改定後の本ポリシーは、公開ページに掲載された時点から効力を生じます。</p>
+    <p>外部への送信を伴う機能の追加（第 4 章 (9) を含みます）など、利用者の情報の取り扱いを変える場合は、本ポリシーを改定したうえで、本アプリ内でお知らせする場合があります。法令により利用者の同意が必要な場合は、同意を得ます。</p>
     <ul>
       <li>公開ページ: <a href="https://which-level.arrow-code-lab.com/">https://which-level.arrow-code-lab.com/</a></li>
       <li>制定日: 2026年11月16日</li>
+      <li>最終改定日: 2026年11月21日</li>
       <li>関連文書: <a href="./terms.html">利用規約</a> / <a href="./legal.html">特定商取引法に基づく表記</a></li>
     </ul>
 
@@ -204,7 +225,7 @@
   <!-- ============ English version ============ -->
   <section id="lang-en" hidden>
     <h1>Privacy Policy (Which Level?)</h1>
-    <p class="meta"><strong>Established: November 16, 2026 / Effective date: November 16, 2026</strong></p>
+    <p class="meta"><strong>Established: November 16, 2026 / Last revised: November 21, 2026 / Effective date: November 21, 2026</strong></p>
 
     <h2>1. Scope and App Information</h2>
     <p>This Privacy Policy (the "Policy") sets out how user information is handled in the mobile application "Which Level?" (Japanese name: どこだっけ; Android package name and iOS bundle ID: com.arrowcodelab.whichlevel, the "App"), provided by an Individual Developer [operator: Arrow Code Lab].</p>
@@ -212,29 +233,30 @@
     <p>The App is not offered in the European Economic Area (EEA), the United Kingdom, or Switzerland.</p>
 
     <h2>2. Information Handled by the App</h2>
-    <p>The App handles the following information. All of this information is <strong>stored locally on the user's device and is never sent to the operator's servers</strong> (the App has no servers managed by the operator). Information sent outside the device is limited to what is described in Section 4.</p>
+    <p>The App handles the following information. This information is <strong>stored locally on the user's device</strong>. The App currently has no servers managed by the operator and does not send this information to the operator. Information sent outside the device is limited to what is described in Section 4. For how information will be handled if features using cloud AI services or similar are added in the future, see Section 4 (9).</p>
     <ul>
-      <li><strong>Parking location (location information)</strong>: The latitude, longitude and accuracy of where the car is parked. When the App is opened, it automatically saves the time and current location as a parking record. The current location is also used to show the distance and direction to the car. If "Record automatically when you leave the car" is turned on, the App also obtains the location when the connection with the car ends (see Section 3).</li>
+      <li><strong>Parking location (location information)</strong>: The latitude, longitude and accuracy of where the car is parked. When the App is opened, it automatically saves the time and current location as a parking record. The current location is also used to show the distance and direction to the car. If "Record automatically when you leave the car" is turned on, the App also obtains the location when the connection with the car ends (see Section 3). In addition, when the user runs "Save Parking Spot" from the Quick Settings tile on Android or from Siri or the Shortcuts app on iOS, the App obtains the current location once at that time and turns it into a parking record the next time the App is opened.</li>
       <li><strong>Air pressure</strong>: The air pressure measured by the device's barometer, and when it was measured, used to determine which level of the parking structure you are on.</li>
-      <li><strong>Information entered by the user</strong>: Level, pillar number, notes, and favorites.</li>
+      <li><strong>Information entered by the user</strong>: Level, pillar number, notes, favorites, and parking fee rules entered or corrected by hand (Japan only).</li>
       <li><strong>Photos</strong>: Photos of the surroundings of the parking spot and of parking fee signs taken with the App's camera, and the labels attached to the photos (up to 5 per record; no audio is recorded). Photos are saved in the App's private storage area and do not appear in the device's photo gallery.</li>
       <li><strong>Text read from photos</strong>: Text in photos, such as pillar numbers and signs. Text recognition is <strong>processed on the device</strong> using Google ML Kit, and photos are never sent outside the device.</li>
-      <li><strong>Fees read from fee signs</strong> (Japan only): The fee rules read from a photo of a parking fee sign, and the parking fee estimated from them. Reading the text on the fee sign and building the fee rules are <strong>processed on the device</strong>, and neither photos nor the recognized text are sent outside the device (see Section 4 (7)). Fees are read and estimated only when the device's region setting is Japan (or, if no region is set, when the language is Japanese); otherwise, the App only saves the photo of the fee sign.</li>
+      <li><strong>Fees read from fee signs</strong> (Japan only): The fee rules read from a photo of a parking fee sign, and the parking fee estimated from them. Reading the text on the fee sign and building the fee rules are <strong>processed on the device</strong>, and neither photos nor the recognized text are sent outside the device (see Section 4 (8)). Fees are read and estimated only when the device's region setting is Japan (or, if no region is set, when the language is Japanese); otherwise, the App only saves the photo of the fee sign.</li>
       <li><strong>Place names</strong>: The place name obtained from the latitude and longitude of the parking location (using the reverse geocoding described in Section 4).</li>
       <li><strong>Record status</strong>: When each record was created, whether the car is still parked or you have returned to it, and when you returned.</li>
       <li><strong>Automatic recording data</strong> (only when "Record automatically when you leave the car" is turned on): The time, location (latitude, longitude and accuracy), movement speed and air pressure held when the connection with the car ends. They are turned into a parking record the next time the App is opened, after which the held data is deleted. On Android, the App also saves the name and Bluetooth address of the Bluetooth device remembered as your car, and whether it was learned automatically from Android Auto or chosen by the user.</li>
       <li><strong>Excluded places</strong> (only when using "Record automatically when you leave the car" with the "Ad-free version"): The name, latitude, longitude and radius of places the user registers as places where leaving the car is not recorded, such as home or work (up to 5). The registration screen shows the map starting at the current location.</li>
-      <li><strong>App settings and usage</strong>: Whether initial setup is complete, the last time and screen used, settings such as whether to open the camera right after recording the parking, vibration, whether to take fee signs with the camera's photo mode, preferred map app, photo retention period, and whether "Record automatically when you leave the car" is on, when the App last asked for a store rating, and startup timing records.</li>
+      <li><strong>App settings and usage</strong>: Whether initial setup is complete, the last time and screen used, settings such as whether to open the camera right after recording the parking, vibration, whether to take fee signs with the camera's photo mode, preferred map app, photo retention period, appearance (light / dark), whether "Record automatically when you leave the car" and its notification are on, whether fee milestone notifications are on and how many minutes in advance they are shown, when the App last asked for a store rating, which update notice was dismissed and when, and startup timing records.</li>
       <li><strong>Purchase status</strong>: Whether the "Ad-free version" has been purchased, and how many times in a row the store has answered that there is no purchase (used to decide whether to return the photo retention period to the free version's period).</li>
       <li><strong>Map cache</strong>: Map data that has been displayed, temporarily stored on the device by the Google Maps SDK described in Section 4.</li>
     </ul>
     <p>The App has no account registration or login. It does not collect names, email addresses, phone numbers, contacts or similar information.</p>
-    <p><strong>Sharing</strong>: When the user uses the App's share function, a Google Maps URL showing the parking location (including latitude and longitude), the level, the pillar number and the time are passed through the device's share function to the destination the user chooses (such as a messaging app). Sending to the destination is performed by the user's own action, and the App does not control the destination. Please check who you are sharing with.</p>
+    <p><strong>Sharing</strong>: When the user uses the App's share function, a Google Maps URL showing the parking location (including latitude and longitude), the level, the pillar number, the time, the App's name, and the URL of a page that leads to the App's store page are passed through the device's share function to the destination the user chooses (such as a messaging app). Sending to the destination is performed by the user's own action, and the App does not control the destination. Please check who you are sharing with.</p>
+    <p><strong>Home screen widget</strong> (Android only): If you place the widget on your home screen, it shows the level, pillar number, elapsed time and estimated fee while parked. The content is created on the device and is not sent outside it. Please note that your home screen may be visible to people around you.</p>
 
     <h2>3. Device Permissions and Their Uses</h2>
     <p>The App uses the following permissions to provide its features. Permissions are requested when the relevant feature is used, and if the user denies a permission, the corresponding feature may not be available.</p>
     <ul>
-      <li><strong>Location</strong> (Android: ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION / iOS: location while using the App): Used to record the parking location and to guide you back to the car. Unless "Record automatically when you leave the car" below is turned on, location is obtained only while the App is in use and is not obtained in the background. On iOS, if only "approximate location" is allowed, the App may ask for temporary use of precise location, only when recording the parking location and guiding you back.</li>
+      <li><strong>Location</strong> (Android: ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION / iOS: location while using the App): Used to record the parking location and to guide you back to the car. Unless "Record automatically when you leave the car" below is turned on, location is obtained only while the App is in use and is not obtained in the background. When the user runs "Save Parking Spot" from the Quick Settings tile on Android or from Siri or the Shortcuts app on iOS, the App also obtains the current location once, only at that time. On iOS, if only "approximate location" is allowed, the App may ask for temporary use of precise location, only when recording the parking location and guiding you back.</li>
       <li><strong>Background location</strong> (Android: ACCESS_BACKGROUND_LOCATION / iOS: location "Always"): Requested only when the user turns on "Record automatically when you leave the car" on the settings screen. Because the App is closed when you leave the car, <strong>the App obtains the current location once, only when the connection with the car ends, even while the App is not in use</strong>, and holds it on the device together with the air pressure. The held values become a parking record the next time the App is opened. The App does not obtain location in the background at any other time and never tracks location continuously. This feature is off by default, and turning it off also deletes any held values that have not yet become a record.
         <ul>
           <li><strong>Android</strong>: Obtained when the connection with the remembered car Bluetooth device ends.</li>
@@ -245,15 +267,16 @@
       <li><strong>Bluetooth</strong> (Android only. Android 12 or later: BLUETOOTH_CONNECT / Android 11 or earlier: BLUETOOTH): Used, when "Record automatically when you leave the car" is turned on, to detect connection to and disconnection from the car's Bluetooth and to identify the car. The App reads the names and addresses of paired devices and saves on the device only the device chosen as the car (or learned automatically from Android Auto). It is not used to scan for nearby Bluetooth devices or to estimate location.</li>
       <li><strong>Camera</strong> (Android: CAMERA / iOS: Camera): Used to take photos of the surroundings of the parking spot. Records such as notes can still be saved without this permission.</li>
       <li><strong>Motion sensors</strong> (iOS: Motion &amp; Fitness): Used to determine which level of the parking structure you are on by measuring air pressure. On Android, no permission is needed to use the barometer.</li>
+      <li><strong>Notifications</strong> (Android 13 or later: POST_NOTIFICATIONS / iOS: Notifications): Used to notify you when "Record automatically when you leave the car" has recorded your spot, and of fee milestones (the end of the free period, reaching the maximum fee, and shortly before the maximum-fee period ends). Requested when the user turns these notifications on. Notifications are scheduled and shown by the App on the device, and their text includes times, fees and similar details. They may appear on the lock screen, so change the device's notification settings if needed.</li>
       <li><strong>Vibration</strong> (Android: VIBRATE): Used for vibration feedback during operation and guidance.</li>
-      <li><strong>Internet</strong> (Android: INTERNET): Used for the map, reverse geocoding, advertising and billing communications described in Section 4.</li>
+      <li><strong>Internet</strong> (Android: INTERNET): Used for the map, reverse geocoding, advertising, billing and app update check communications described in Section 4.</li>
     </ul>
     <p>On Android, when "Record automatically when you leave the car" is on, after a Bluetooth connection with a possible car (a device identifying itself as car audio or hands-free), the App checks on the device whether Android Auto is in use, and if so, remembers that device as the car. The App does not store or send Android Auto usage.</p>
     <p>In addition, the App uses the device's compass to show the direction of the car. No permission is required for this, and the sensor values are used only for the guidance display and are neither stored nor transmitted.</p>
     <p>Because photos are saved in the App's private storage area, the App does not use permissions to access the photo library or storage. It also does not use the contacts permission. The App does not use the microphone either (on iOS, the App includes a description of microphone use because the camera component used for taking photos requires it, but the App never records audio and does not ask for microphone permission).</p>
     <p>On Android, the map, advertising and billing SDKs described in Section 4 may add permissions needed for their functions (such as use of the Advertising ID, billing, and checking the network state).</p>
 
-    <h2>4. Third-Party Services (Maps, Reverse Geocoding, Advertising and Billing)</h2>
+    <h2>4. Third-Party Services (Maps, Reverse Geocoding, Advertising, Billing and AI)</h2>
     <p>The App uses the following third-party services. Data sent to these services is handled in accordance with the privacy policy of each provider.</p>
 
     <p><strong>(1) Map display (Google Maps)</strong><br>
@@ -301,30 +324,46 @@
     <strong>Information sent</strong>: Information about purchases (product, purchase status, etc.)</p>
     <p>The App may also show the store's rating prompt (Google Play In-App Review / App Store rating). Ratings are processed by each store, and the operator does not receive their content.</p>
 
-    <p><strong>(5) External map apps</strong><br>
+    <p><strong>(5) App update check (Google Play / App Store)</strong><br>
+    The App asks each store whether a newer version of the App is available, so that it can let you know in the App. Downloading and installing updates are handled by each store.<br>
+    <strong>Recipient</strong>: Google LLC and its affiliates (Google Play In-App Updates) on Android, and Apple Inc. (App Store search API) on iOS<br>
+    <strong>Purpose</strong>: Checking whether a newer version is available and guiding you to update<br>
+    <strong>Information sent</strong>: On Android, the information that the Google Play feature attaches to its communications (such as the App's identifier and version); on iOS, the App's bundle ID and the device's region setting (country). Information needed for communication, such as the IP address, is also sent.</p>
+
+    <p><strong>(6) External map apps</strong><br>
     When showing directions to the car, the App opens the map app chosen by the user (Google Maps / Apple Maps) and passes it the latitude and longitude of the parking location. Handling in the map app is subject to the privacy policy of its provider.</p>
 
-    <p><strong>(6) Text recognition (Google ML Kit)</strong><br>
+    <p><strong>(7) Text recognition (Google ML Kit)</strong><br>
     Text recognition from photos is processed on the device, and neither photos nor the recognized text are sent. However, ML Kit may send information about its usage and performance to Google in order to maintain and improve the feature.<br>
     <strong>Recipient</strong>: Google LLC<br>
     <strong>Purpose</strong>: Monitoring how ML Kit operates, and maintaining and improving the feature<br>
     <strong>Information sent</strong>: Device information (device model, OS version, etc.), app information, and information about ML Kit usage and performance<br>
     Details: <a href="https://developers.google.com/ml-kit/terms">https://developers.google.com/ml-kit/terms</a></p>
 
-    <p><strong>(7) Reading fee signs (on-device AI, Japan only)</strong><br>
+    <p><strong>(8) Reading fee signs (on-device AI, Japan only)</strong><br>
     When building fee rules from a photo of a fee sign, the App uses the AI built into the device and <strong>processes it on the device</strong>. Photos of the sign, the recognized text and the fee rules are never sent outside the device. On devices where on-device AI is not available, the App reads the sign using only its own processing.</p>
     <ul>
-      <li><strong>Android</strong>: Google's Gemini Nano (running on the device's AICore) is used through ML Kit's generative AI feature (GenAI Prompt API). Information about ML Kit usage and performance is sent as described in (6) above. The AI model is obtained by the device (AICore), and the App does not request it.</li>
+      <li><strong>Android</strong>: Google's Gemini Nano (running on the device's AICore) is used through ML Kit's generative AI feature (GenAI Prompt API). Information about ML Kit usage and performance is sent as described in (7) above. The AI model is obtained by the device (AICore), and the App does not request it.</li>
       <li><strong>iOS</strong>: Apple's Foundation Models (the on-device model of Apple Intelligence) are used.</li>
     </ul>
 
-    <p>Other than the above, the App does not use any SDKs that send data externally for analytics or crash reporting, such as Firebase Analytics or Crashlytics. When an unexpected error occurs, the App only shows a notice on the screen and does not send the error details anywhere. The App also does not use push notifications.</p>
+    <p><strong>(9) Use of cloud AI services and similar (if added in the future)</strong><br>
+    The App currently does not send photos or text read from photos to external AI services. In the future, to improve the accuracy of reading fee signs and pillar or level signs, or to provide new features, the App may add features that send information such as photos, text read from photos, fee rules and parking locations to external AI services (for example, Google's Gemini API) or to servers managed or contracted by the operator for processing. In that case, the information will be handled as follows.</p>
+    <ul>
+      <li>The recipients, the information sent and the purposes will be added to this Policy before the feature is made available.</li>
+      <li>Information will be sent when the user chooses to use the feature (for example, by turning it on in the settings or by agreeing to a confirmation shown before sending). If you do not use the feature, the App continues to use only on-device processing.</li>
+      <li>Information sent will be handled in accordance with the terms and privacy policy of the AI service provider. The provider may keep the information sent for a certain period.</li>
+      <li>To improve reading accuracy, the operator may keep information sent (such as photos) and use it for verification and improvement. In that case, the information kept, the retention period and how to delete it will be described in this Policy, and this will be done only with the user's consent.</li>
+      <li>Photos may contain people's faces, other cars' license plates and the like. Please be careful about what appears in a photo before sending it.</li>
+    </ul>
+
+    <p>Other than the above, the App currently does not use any SDKs that send data externally for analytics or crash reporting, such as Firebase Analytics or Crashlytics. When an unexpected error occurs, the App only shows a notice on the screen and does not send the error details anywhere. Notifications are scheduled and shown by the App on the device, and the App does not use push notifications sent from the operator's servers or similar.</p>
 
     <h2>5. Data Storage Location and Retention Period</h2>
     <ul>
-      <li>All of the information described in Section 2 is <strong>stored on the user's device</strong>. The operator does not hold or store this data.</li>
+      <li>The information described in Section 2 is <strong>stored on the user's device</strong>. The operator currently does not hold or store this data (except where a feature under Section 4 (9) is added and data is kept with the user's consent).</li>
       <li>Parking records are kept on the device until the user deletes them, deletes the App's data, or uninstalls the App.</li>
-      <li>Photos in records where you have returned to the car are automatically deleted after the configured retention period. The retention period is 7 days in the free version. In the "Ad-free version", 7, 30, 90, 180 or 365 days or unlimited can be selected (if unlimited is selected, photos are not deleted automatically). If the store repeatedly confirms that there is no purchase of the "Ad-free version" (including after a refund), the retention period is returned to 7 days. Photos in records marked as favorites are not deleted.</li>
+      <li>Photos in records where you have returned to the car are automatically deleted after the configured retention period. The retention period is 7 days in the free version. In the "Ad-free version", 7, 30, 90, 180 or 365 days or unlimited can be selected (if unlimited is selected, photos are not deleted automatically). If the store repeatedly confirms that there is no purchase of the "Ad-free version" (including after a refund), the retention period is returned to 7 days. Photos in records marked as favorites are not deleted (up to 3 favorites can be registered in the free version; if the store repeatedly confirms that there is no purchase of the "Ad-free version", favorites other than the 3 most recent are removed from favorites).</li>
       <li>Excluded places are kept on the device until the user deletes them, uses "Delete all data", or uninstalls the App. If the "Ad-free version" purchase is no longer present, the registrations remain but are no longer used for exclusion.</li>
       <li>The time, location and air pressure held by "Record automatically when you leave the car" are turned into a parking record or discarded the next time the App is opened, and are then deleted from the held data. Even if disconnections continue without the App being opened, only a limited number of the most recent ones are kept.</li>
       <li>The map cache is stored and managed on the device by the Google Maps SDK. It is not covered by "Delete all data" on the settings screen and is not deleted by it. It is deleted when the App is uninstalled. In addition, on <strong>Android</strong> it can be deleted by clearing the App's cache from the device "Settings" &rarr; "Apps" &rarr; this App &rarr; "Storage". <strong>iOS</strong> has no setting to clear only the App's cache, so to delete it, uninstall the App.</li>
@@ -340,14 +379,15 @@
     </ul>
 
     <h2>6. Provision to Third Parties</h2>
-    <p>Because the operator does not obtain the data on the user's device, the operator does not provide it to third parties.</p>
-    <p>Data is sent to third parties only for the map display, reverse geocoding, ad delivery, in-app purchases, store ratings, external map apps and text recognition (including reading fee signs) described in Section 4. User data is not provided to or sold to third parties for any other purpose.</p>
+    <p>Because the operator currently does not obtain the data on the user's device, the operator does not provide it to third parties.</p>
+    <p>Data is sent to third parties only for the map display, reverse geocoding, ad delivery, in-app purchases, store ratings, app update checks, external map apps and text recognition (including reading fee signs) described in Section 4, and for features added in the future under Section 4 (9) as added to this Policy. Except as required by law, user data is not provided to or sold to third parties for any other purpose.</p>
 
     <h2>7. User Rights (Data Deletion and Advertising ID Reset)</h2>
     <ul>
       <li><strong>Deleting on-device data</strong>: Parking records can be deleted one at a time from the App's history screen. "Delete all data" on the settings screen deletes all records, photos and settings at once. It also turns off "Record automatically when you leave the car" and deletes the held data and the remembered car Bluetooth device (the purchase status of the "Ad-free version" and the map cache are kept; see Section 5 for the map cache). Uninstalling the App deletes all of the App's data stored on the device (on iOS, data included in iCloud or other backups remains until that backup is deleted). Purchases can be recovered with "Restore purchase" on the settings screen after reinstalling.</li>
       <li><strong>Stopping the use of location and camera</strong>: You can revoke the App's location and camera permissions at any time from the device settings (Android: "Settings" &rarr; "Apps" &rarr; this App &rarr; "Permissions" / iOS: "Settings" &rarr; this App). After revoking them, the App can no longer record parking locations or take photos.</li>
       <li><strong>Stopping automatic recording</strong>: Turning off "Record automatically when you leave the car" on the settings screen stops the App from obtaining location when the connection with the car ends. You can also revoke the background location permission (Android: change location to "Allow only while using the app" / iOS: change location to "While Using the App") or the Bluetooth permission (Android: "Nearby devices") from the device settings. On iOS, you can also stop it by deleting the automation you set up in the Shortcuts app.</li>
+      <li><strong>Stopping notifications</strong>: Turning off each notification on the App's settings screen, or revoking the App's notification permission from the device settings, stops notifications from being shown.</li>
       <li><strong>Resetting / deleting the Advertising ID (Android)</strong>: From the Android "Settings" &rarr; "Google" &rarr; "Ads", the user can reset or delete the advertising ID and opt out of personalized advertising.</li>
       <li><strong>Changing consent for advertising</strong>: In regions where consent is required, the user can change it from "Ad privacy settings" on the App's settings screen.</li>
     </ul>
@@ -360,9 +400,11 @@
 
     <h2>10. Changes to This Policy</h2>
     <p>The operator may revise this Policy in response to changes in laws or in the service. If any material change is made, it will be announced on the published page of this Policy. The revised Policy takes effect from the time it is posted on the published page.</p>
+    <p>When changing how user information is handled, such as adding a feature that sends data externally (including under Section 4 (9)), the operator will revise this Policy and may announce the change in the App. Where the user's consent is required by law, the operator will obtain it.</p>
     <ul>
       <li>Published page: <a href="https://which-level.arrow-code-lab.com/">https://which-level.arrow-code-lab.com/</a></li>
       <li>Established: November 16, 2026</li>
+      <li>Last revised: November 21, 2026</li>
       <li>Related documents: <a href="./terms.html">Terms of Service</a> / <a href="./legal.html">Legal Notice</a></li>
     </ul>
 
